@@ -139,7 +139,7 @@ end)
 
 --[[ Special Boss ]]--
 
-Teleport:NewDropdown("Special Boss", "Teleport to specific special boss", {"Granny", "Executioner", "Sailord", "Kai Guy", "Big Fish","The Skeleton", "The Patris", "Prism Troll", "Old Fart"}, function(SelectedLocation)
+Teleport:NewDropdown("Special Boss", "Teleport to specific special boss", {"Granny", "Executioner", "Sailord", "Kai Guy", "Big Fish","The Skeleton", "The Patris", "Prism Troll", "Old Fart", "N"}, function(SelectedLocation)
    if SelectedLocation == "Granny" then
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1359, 31, -3455)
    elseif SelectedLocation == "Executioner" then
@@ -158,7 +158,8 @@ Teleport:NewDropdown("Special Boss", "Teleport to specific special boss", {"Gran
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(903, 14, 141)
    elseif SelectedLocation == "Old Fart" then
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7487, -460, 1006)
-   
+   elseif SelectedLocationn == "N" then
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(94, 42, -3741)  
    end
 end)
 
