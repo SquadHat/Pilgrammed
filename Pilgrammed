@@ -24,7 +24,7 @@ Bank:NewToggle("Auto Deposit", "Auto put your money in your bank", function(stat
     if state then
 _G.Deposit = true
 while _G.Deposit == true do
-game:GetService("ReplicatedStorage").Remotes.Bank:InvokeServer(true, 1)
+game:GetService("ReplicatedStorage").Remotes.Bank:InvokeServer(true, 9000000000)
 wait()
 end
     else
@@ -197,7 +197,7 @@ Boss:NewDropdown("Special Boss", "Teleport to specific special boss", {"Granny",
    elseif SelectedLocation == "The Patris" then
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3286, -19, -4534)
    elseif SelectedLocation == "Prism Troll" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(903, 14, 141)
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(746, -256, 17)
    elseif SelectedLocation == "Old Fart" then
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7487, -460, 1006)
    elseif SelectedLocation == "N" then
