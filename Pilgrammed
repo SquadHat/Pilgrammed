@@ -45,8 +45,9 @@ fireproximityprompt(cauldronprompt)
 end)
 
 Loadout:NewKeybind("Warp", "Use Mirror", Enum.KeyCode.Y, function()
-local warpprompt = game:GetService("Workspace").Mirrors.Prairie:GetChildren()[3].ProximityPrompt
-fireproximityprompt(warpprompt)
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Disabled = true
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Enabled = true
 end)
 
 Loadout:NewButton("Trigger Cultists", "open N door to trigger cultists", function()
