@@ -4,6 +4,7 @@ local Window = Library.CreateLib("Pilgrammed", "Synapse")
 local Main = Window:NewTab("Main")
 local Shop = Window:NewTab("Shop")
 local TP = Window:NewTab("Teleport")
+local Gemmer = Window:NewTab("Gem")
 local Settings = Window:NewTab("Settings")
 
 --[[ Section ]]--
@@ -13,6 +14,8 @@ local Scaven = Shop:NewSection("Ingredients")
 local Rare = Shop:NewSection("Others")
 local Teleport = TP:NewSection("Island")
 local Boss = TP:NewSection("Boss")
+local Remo = Gemmer:NewSection("Remove Gem")
+local Gemo = Gemmer:NewSection("Install Gem")
 local Settings = Settings:NewSection("Settings")
 
 --[[ Main ]]--
@@ -200,6 +203,44 @@ Boss:NewDropdown("Special Boss", "Teleport to specific special boss", {"Granny",
    elseif SelectedLocation == "N" then
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(94, 42, -3741)  
    end
+end)
+
+--[[ Gem ]]--
+
+Remo:NewButton("Remove Gem", "Remove The Currently Holding Weapon With Gem Reforged", function()
+game:GetService("ReplicatedStorage").Remotes.Gem:FireServer()
+end)
+
+Gemo:NewButton("Charm Gem", "Install Charm Gem on Holding Weapon", function()
+game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Charm Gem")
+end)
+
+Gemo:NewButton("Blood Gem", "Install Blood Gem on Holding Weapon", function()
+game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Blood Gem")
+end)
+
+Gemo:NewButton("Light Gem", "Install Light Gem on Holding Weapon", function()
+game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Light Gem")
+end)
+
+Gemo:NewButton("Frost Gem", "Install Frost Gem on Holding Weapon", function()
+game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Frost Gem")
+end)
+
+Gemo:NewButton("Fire Gem", "Install Fire Gem on Holding Weapon", function()
+game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Fire Gem")
+end)
+
+Gemo:NewButton("Magic Gem", "Install Magic Gem on Holding Weapon", function()
+game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Magic Gem")
+end)
+
+Gemo:NewButton("Insignia Gem", "Install Insignia Gem on Holding Weapon", function()
+game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Insignia Gem")
+end)
+
+Gemo:NewButton("Explosive Gem", "Install Explosive Gem on Holding Weapon", function()
+game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Explosive Gem")
 end)
 
 --[[ Settings ]]--
