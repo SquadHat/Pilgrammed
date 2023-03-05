@@ -43,7 +43,7 @@ fireproximityprompt(cabinetprompt)
 end)
 
 Loadout:NewKeybind("Cauldron", "Use Cauldron", Enum.KeyCode.L, function()
-local cauldronprompt = game:GetService("Workspace").Map.PrairieVillage.Model.Cauldron.Liquid.ProximityPrompt
+local cauldronprompt = game:GetService("Workspace").Map.Cauldron.Liquid.ProximityPrompt
 fireproximityprompt(cauldronprompt)
 end)
 
