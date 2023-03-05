@@ -2,12 +2,15 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Pilgrammed", "Synapse")
 local Main = Window:NewTab("Main")
+local Shop = Window:NewTab("Shop")
 local TP = Window:NewTab("Teleport")
 local Settings = Window:NewTab("Settings")
 
 --[[ Section ]]--
 local Bank = Main:NewSection("Bank")
 local Loadout = Main:NewSection("Miscellaneous")
+local Scaven = Shop:NewSection("Ingredients")
+local Rare = Shop:NewSection("Others")
 local Teleport = TP:NewSection("Island")
 local Boss = TP:NewSection("Boss")
 local Settings = Settings:NewSection("Settings")
@@ -46,14 +49,31 @@ local warpprompt = game:GetService("Workspace").Mirrors.Prairie.Part.ProximityPr
 fireproximityprompt(warpprompt)
 end)
 
-Loadout:NewButton("Teleport To Mela", "teleport!1?!!?1", function()
-game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").NPCs.Mela:GetPivot()
-end)
-
 Loadout:NewButton("Trigger Cultists", "open N door to trigger cultists", function()
 fireclickdetector(game:GetService("Workspace").Map.Hideout.Door.Door.ClickDetector)
 end)
 
+--[[ Shop ]]--
+
+Scaven:NewButton("Mela", "Open Mela Shop", function()
+local melaprompt = game:GetService("Workspace").NPCs.Mela.HumanoidRootPart.DialogClick
+fireproximityprompt(melaprompt)
+end)
+
+Scaven:NewButton("Pomme", "Open Pomme Ingredients Shop", function()
+local pommeprompt = game:GetService("Workspace").NPCs.Pomme.HumanoidRootPart.DialogClick
+fireproximityprompt(pommeprompt)
+end)
+
+Scaven:NewButton("Nebraska", "Open Nebraska Wares", function()
+local nebraskaprompt = game:GetService("Workspace").NPCs.Nebraska.HumanoidRootPart.DialogClick
+fireproximityprompt(nebraskaprompt)
+end)
+
+Rare:NewButton("Talvern (Gem)", "Open Talvern Gem Enchant Shop", function()
+local talvernprompt = game:GetService("Workspace").NPCs.Talvern.HumanoidRootPart.DialogClick
+fireproximityprompt(talvernprompt)
+end)
 
 --[[ Teleport ]]--
 
