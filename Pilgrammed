@@ -45,7 +45,7 @@ fireproximityprompt(cauldronprompt)
 end)
 
 Loadout:NewKeybind("Warp", "Use Mirror", Enum.KeyCode.Y, function()
-local warpprompt = game:GetService("Workspace").Mirrors.Prairie.Part.ProximityPrompt
+local warpprompt = game:GetService("Workspace").Mirrors.Prairie:GetChildren()[3].ProximityPrompt
 fireproximityprompt(warpprompt)
 end)
 
