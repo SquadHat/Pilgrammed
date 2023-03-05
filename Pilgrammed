@@ -9,6 +9,7 @@ local Settings = Window:NewTab("Settings")
 local Bank = Main:NewSection("Bank")
 local Loadout = Main:NewSection("Miscellaneous")
 local Teleport = TP:NewSection("Island")
+local Boss = TP:NewSection("Boss")
 local Settings = Settings:NewSection("Settings")
 
 --[[ Main ]]--
@@ -31,7 +32,17 @@ end)
 
 
 Loadout:NewKeybind("Cabinet", "Open Cabinet Anywhere!", Enum.KeyCode.J, function()
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Equipment.Visible = true
+local cabinetprompt = game:GetService("Workspace").Map.PrairieVillage.Cabinet:GetChildren()[2].ProximityPrompt
+fireproximityprompt(cabinetprompt)
+end)
+
+Loadout:NewKeybind("Cauldron", "Use Cauldron", Enum.KeyCode.C, function()
+local cauldronprompt = game:GetService("Workspace").Map.PrairieVillage.Model.Cauldron.Liquid.ProximityPrompt
+fireproximityprompt(cauldronprompt)
+end)
+
+Loadout:NewKeybind("Warp", "Open Pocket Mirror Without Cooldown", Enum.KeyCode.Y, function()
+game:GetService("Players").shakemyhand1010.PlayerGui.ScreenGui.Warp.Visible = true
 end)
 
 Loadout:NewButton("Teleport To Mela", "teleport!1?!!?1", function()
@@ -113,7 +124,7 @@ end)
 
 --[[ Boss ]]--
 
-Teleport:NewDropdown("Boss", "Teleport to specific boss location", {"Thief King", "Yalgaroth", "Viperhead", "King Sandpod", "Pop Off Pirate", "Shock Merauder", "Mondo Squid", "Magma Turtle", "Ice King", "Abdominal Snowman", "Highway Son", "Archmage"}, function(SelectedLocation)
+Boss:NewDropdown("Boss", "Teleport to specific boss location", {"Thief King", "Yalgaroth", "Viperhead", "King Sandpod", "Pop Off Pirate", "Shock Merauder", "Mondo Squid", "Magma Turtle", "Ice King", "Abdominal Snowman", "Highway Son", "Archmage"}, function(SelectedLocation)
    if SelectedLocation == "Thief King" then
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(739, -15, 204)
    elseif SelectedLocation == "Yalgaroth" then
@@ -143,7 +154,7 @@ end)
 
 --[[ Special Boss ]]--
 
-Teleport:NewDropdown("Special Boss", "Teleport to specific special boss", {"Granny", "Executioner", "Sailord", "Kai Guy", "Big Fish","The Skeleton", "The Patris", "Prism Troll", "Old Fart", "N"}, function(SelectedLocation)
+Boss:NewDropdown("Special Boss", "Teleport to specific special boss", {"Granny", "Executioner", "Sailord", "Kai Guy", "Big Fish","The Skeleton", "The Patris", "Prism Troll", "Old Fart", "N"}, function(SelectedLocation)
    if SelectedLocation == "Granny" then
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1359, 31, -3455)
    elseif SelectedLocation == "Executioner" then
