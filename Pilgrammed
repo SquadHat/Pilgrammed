@@ -78,7 +78,7 @@ end)
 
 --[[ Teleport ]]--
 
-Teleport:NewDropdown("Island", "Teleport to specific islands", {"Big Iron", "Blackened Island", "Bear Island", "Dark Tower Island", "LOFI Island", "Vampire Island", "Mountain Basin", "Field", "Labyrinth", "Polar Bear Island", "Backdoor Island", "Patris Island", "Enchanted Island", "Eggroost Island"}, function(SelectedLocation)
+Teleport:NewDropdown("Island", "Teleport to specific islands", {"Big Iron", "Blackened Island", "Bear Island", "Dark Tower Island", "Patchland Grove", "LOFI Island", "Vampire Island", "Mountain Basin", "Field", "Labyrinth", "Polar Bear Island", "Backdoor Island", "Patris Island", "Enchanted Island", "Eggroost Island"}, function(SelectedLocation)
     if SelectedLocation == "Big Iron" then
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2399, -17, -3098)
    elseif SelectedLocation == "Blackened Island" then
@@ -87,6 +87,8 @@ Teleport:NewDropdown("Island", "Teleport to specific islands", {"Big Iron", "Bla
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1463, 69, -130)
    elseif SelectedLocation == "Dark Tower Island" then
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(889, -5, -5835)
+   elseif SelectedLocation == "Patchland Grove" then
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2312, 1, 1044)
    elseif SelectedLocation == "LOFI Island" then
        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3398, -293, -1502)
    elseif SelectedLocation == "Vampire Island" then
