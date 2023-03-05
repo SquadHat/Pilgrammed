@@ -41,8 +41,9 @@ local cauldronprompt = game:GetService("Workspace").Map.PrairieVillage.Model.Cau
 fireproximityprompt(cauldronprompt)
 end)
 
-Loadout:NewKeybind("Warp", "Open Pocket Mirror Without Cooldown", Enum.KeyCode.Y, function()
-game:GetService("Players").shakemyhand1010.PlayerGui.ScreenGui.Warp.Visible = true
+Loadout:NewKeybind("Warp", "Use Mirror", Enum.KeyCode.Y, function()
+local warpprompt = game:GetService("Workspace").Mirrors.Prairie.Part.ProximityPrompt
+fireproximityprompt(warpprompt)
 end)
 
 Loadout:NewButton("Teleport To Mela", "teleport!1?!!?1", function()
