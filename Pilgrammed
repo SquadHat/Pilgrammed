@@ -11,7 +11,10 @@ local Settings = Window:NewTab("Settings")
 local Bank = Main:NewSection("Bank")
 local Loadout = Main:NewSection("Miscellaneous")
 local Scaven = Shop:NewSection("Ingredients")
+local Shorp = Shop:NewSection("Items")
+local Armos = Shop:NewSection("Armor/accessory")
 local Rare = Shop:NewSection("Others")
+local Shosp = Shop:NewSection("Special Items")
 local Teleport = TP:NewSection("Island")
 local Boss = TP:NewSection("Boss")
 local Remo = Gemmer:NewSection("Remove Gem")
@@ -93,11 +96,147 @@ local nebraskaprompt = game:GetService("Workspace").NPCs.Nebraska.HumanoidRootPa
 fireproximityprompt(nebraskaprompt)
 end)
 
+-- Items --
+
+Shorp:NewButton("Blacksmith (Prairie)", "Open Blacksmith Shop", function()
+local blacksmithprompt = game:GetService("Workspace").NPCs.Blacksmith.HumanoidRootPart.DialogClick
+fireproximityprompt(blacksmithprompt)
+end)
+
+Shorp:NewButton("Archer (Prairie)", "Open Archer Shop", function()
+local archerprompt = game:GetService("Workspace").NPCs.Archer.HumanoidRootPart.DialogClick
+fireproximityprompt(archerprompt)
+end)
+
+Shorp:NewButton("Gorlan (Desert)", "Open Gorlan Shop", function()
+local gorlanprompt = game:GetService("Workspace").NPCs.Gorlan.HumanoidRootPart.DialogClick
+fireproximityprompt(gorlanprompt)
+end)
+
+Shorp:NewButton("Verdant (Savannah)", "Open Verdant Shop", function()
+local verdantprompt = game:GetService("Workspace").NPCs.Verdant.HumanoidRootPart.DialogClick
+fireproximityprompt(verdantprompt)
+end)
+
+Shorp:NewButton("Friendly Witch (Swamp)", "Open Witch Shop", function()
+local verdantprompt = game:GetService("Workspace").NPCs["Friendly Witch"].HumanoidRootPart.DialogClick
+fireproximityprompt(verdantprompt)
+end)
+
+Shorp:NewButton("Oglorn (Volcano)", "Open Oglorn Shop", function()
+local oglornprompt = game:GetService("Workspace").NPCs.Oglorn.HumanoidRootPart.DialogClick
+fireproximityprompt(oglornprompt)
+end)
+
+Shorp:NewButton("Fimbul (Mountain)", "Open Fimbul Shop", function()
+local fimbulprompt = game:GetService("Workspace").NPCs.Fimbul.HumanoidRootPart.DialogClick
+fireproximityprompt(fimbulprompt)
+end)
+
+Shorp:NewButton("Clever (Cloud City)", "Open Clever Shop", function()
+local cleverprompt = game:GetService("Workspace").NPCs.Clever.HumanoidRootPart.DialogClick
+fireproximityprompt(cleverprompt)
+end)
+
+-- Armor --
+
+Armos:NewButton("Gerald (Prairie)", "Open Gerald Shop", function()
+local geraldprompt = game:GetService("Workspace").NPCs.Blacksmith.HumanoidRootPart.DialogClick
+fireproximityprompt(geraldprompt)
+end)
+
+Armos:NewButton("Lorgan (Desert)", "Open Lorgan Shop", function()
+local lorganprompt = game:GetService("Workspace").NPCs.Lorgan.HumanoidRootPart.DialogClick
+fireproximityprompt(lorganprompt)
+end)
+
+Armos:NewButton("Kennit (Savannah)", "Open Kennit Shop", function()
+local kennitprompt = game:GetService("Workspace").NPCs.Kennit.HumanoidRootPart.DialogClick
+fireproximityprompt(kennitprompt)
+end)
+
+Armos:NewButton("Galon (Volcano)", "Open Galon Shop", function()
+local galonprompt = game:GetService("Workspace").NPCs.Galon.HumanoidRootPart.DialogClick
+fireproximityprompt(galonprompt)
+end)
+
+Armos:NewButton("Lunge (Mountain)", "Open Mountain Shop", function()
+local lungeprompt = game:GetService("Workspace").NPCs.Lunge.HumanoidRootPart.DialogClick
+fireproximityprompt(lungeprompt)
+end)
+
+Armos:NewButton("William (Cloud City)", "Open William Shop", function()
+local williamprompt = game:GetService("Workspace").NPCs.William.HumanoidRootPart.DialogClick
+fireproximityprompt(williamprompt)
+end)
+
 -- Others --
 
 Rare:NewButton("Talvern (Gem)", "Open Talvern Gem Enchant Shop", function()
 local talvernprompt = game:GetService("Workspace").NPCs.Talvern.HumanoidRootPart.DialogClick
 fireproximityprompt(talvernprompt)
+end)
+
+Rare:NewButton("Billy (Observatory)", "Open Billy Shop", function()
+local billyprompt = game:GetService("Workspace").NPCs.Billy.HumanoidRootPart.DialogClick
+fireproximityprompt(billyprompt)
+end)
+
+Rare:NewButton("Capillus (Avatar)", "Change Avatar", function()
+local capillusprompt = game:GetService("Workspace").NPCs.Capillus.HumanoidRootPart.DialogClick
+fireproximityprompt(capillusprompt)
+end)
+
+Rare:NewButton("Jared (Fisherman)", "Fisherman Items", function()
+local jaredprompt = game:GetService("Workspace").NPCs.Jared.HumanoidRootPart.DialogClick
+fireproximityprompt(jaredprompt)
+end)
+
+Rare:NewButton("Dyler (Dye Items)", "Dye your items", function()
+local dylerprompt = game:GetService("Workspace").NPCs.Dyler.HumanoidRootPart.DialogClick
+fireproximityprompt(dylerprompt)
+end)
+
+Rare:NewButton("Simon (Vampire Island)", "Vampire Items", function()
+local simonprompt = game:GetService("Workspace").NPCs.Simon.HumanoidRootPart.DialogClick
+fireproximityprompt(simonprompt)
+end)
+
+Rare:NewButton("Mr Pumpkino (Patchland)", "Creepy Items", function()
+local pumpkinprompt = game:GetService("Workspace").NPCs["Mr. Pumpkino"].HumanoidRootPart.DialogClick
+fireproximityprompt(pumpkinprompt)
+end)
+
+Rare:NewButton("Rafaes (Cultist)", "Cultist Items", function()
+local rafaesprompt = game:GetService("Workspace").NPCs.Rafaes.HumanoidRootPart.DialogClick
+fireproximityprompt(rafaesprompt)
+end)
+
+-- Special Shop --
+
+Shosp:NewButton("Odd Sculpture", "Bag of gems", function()
+local oddprompt = game:GetService("Workspace").NPCs["Odd Sculpture"].HumanoidRootPart.DialogClick
+fireproximityprompt(oddprompt)
+end)
+
+Shosp:NewButton("Verdant (Copper Crystal)", "Copper Crystal Summon Shock Merauder", function()
+local verdantprompt = game:GetService("Workspace").NPCs.Verdant.HumanoidRootPart.DialogClick
+fireproximityprompt(verdantprompt)
+end)
+
+Shosp:NewButton("Sailord (Boat/Boss)", "Upgrade Boat/Boss Npc", function()
+local sailordprompt = game:GetService("Workspace").NPCs.Sailord.HumanoidRootPart.DialogClick
+fireproximityprompt(sailordprompt)
+end)
+
+Shosp:NewButton("Nebraska (Summon Boss)", "Normal Crystal/Unstable Crystal", function()
+local nebraskaprompt = game:GetService("Workspace").NPCs.Nebraska.HumanoidRootPart.DialogClick
+fireproximityprompt(nebraskaprompt)
+end)
+
+Shosp:NewButton("Gelida (???)", "", function()
+local gelidaprompt = game:GetService("Workspace").NPCs.Gelida.HumanoidRootPart.DialogClick
+fireproximityprompt(gelidaprompt)
 end)
 
 --[[ Teleport ]]--
