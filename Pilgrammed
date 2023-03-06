@@ -70,7 +70,7 @@ game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Imp")
 game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Reaper")
    elseif SelectedLocation == "Ice Imp" then
 game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Ice")
-   elseif SelectedLocationn == "Vampire" then
+   elseif SelectedLocation == "Vampire" then
 game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Vampire")
    end
 end)
