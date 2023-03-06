@@ -55,7 +55,7 @@ game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Disa
 game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Enabled = true
 end)
 
-Loadout:NewKeybind("Bank", "Open Bank Anywhere", Enum.KeyCode.B, function()
+Loadout:NewKeybind("Bank", "Open Bank Anywhere", Enum.KeyCode.K, function()
 game:GetService("Players").shakemyhand1010.PlayerGui.ScreenGui.Bank.Visible = true
 end)
 
