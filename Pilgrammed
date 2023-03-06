@@ -57,6 +57,18 @@ Loadout:NewButton("Trigger Cultists", "open N door to trigger cultists", functio
 fireclickdetector(game:GetService("Workspace").Map.Hideout.Door.Door.ClickDetector)
 end)
 
+Loadout:NewDropdown("Race", "Change Race", {"Imp","Human","Ice Imp","Vampire"}, function(SelectedLocation)
+   if SelectedLocation == "Imp" then
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Imp")
+   elseif SelectedLocation == "Human" then
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Reaper")
+   elseif SelectedLocation == "Ice Imp" then
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Ice")
+   elseif SelectedLocationn == "Vampire" then
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Vampire")
+   end
+end)
+
 --[[ Shop ]]--
 
 Scaven:NewButton("Mela", "Open Mela Shop", function()
