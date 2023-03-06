@@ -141,7 +141,7 @@ end)
 -- Armor --
 
 Armos:NewButton("Gerald (Prairie)", "Open Gerald Shop", function()
-local geraldprompt = game:GetService("Workspace").NPCs.Blacksmith.HumanoidRootPart.DialogClick
+local geraldprompt = game:GetService("Workspace").NPCs.Gerald.HumanoidRootPart.DialogClick
 fireproximityprompt(geraldprompt)
 end)
 
