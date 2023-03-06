@@ -71,6 +71,8 @@ end)
 
 --[[ Shop ]]--
 
+-- Ingredients --
+
 Scaven:NewButton("Mela", "Open Mela Shop", function()
 local melaprompt = game:GetService("Workspace").NPCs.Mela.HumanoidRootPart.DialogClick
 fireproximityprompt(melaprompt)
@@ -81,10 +83,17 @@ local pommeprompt = game:GetService("Workspace").NPCs.Pomme.HumanoidRootPart.Dia
 fireproximityprompt(pommeprompt)
 end)
 
+Scaven:NewButton("Potcup", "Open Potcup Tea Shop", function()
+local potcupprompt = game:GetService("Workspace").Map.Underground.Potcup.HumanoidRootPart.DialogClick
+fireproximityprompt(potcupprompt)
+end)
+
 Scaven:NewButton("Nebraska", "Open Nebraska Wares", function()
 local nebraskaprompt = game:GetService("Workspace").NPCs.Nebraska.HumanoidRootPart.DialogClick
 fireproximityprompt(nebraskaprompt)
 end)
+
+-- Others --
 
 Rare:NewButton("Talvern (Gem)", "Open Talvern Gem Enchant Shop", function()
 local talvernprompt = game:GetService("Workspace").NPCs.Talvern.HumanoidRootPart.DialogClick
