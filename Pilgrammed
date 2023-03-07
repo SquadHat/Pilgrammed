@@ -214,6 +214,11 @@ local pumpkinprompt = game:GetService("Workspace").NPCs["Mr. Pumpkino"].Body.Dia
 fireproximityprompt(pumpkinprompt)
 end)
 
+Rare:NewButton("Devai (Kai Items)", "Kai guy accessories armour", function()
+local devaiprompt = game:GetService("Workspace").NPCs.Devai.HumanoidRootPart.DialogClick
+fireproximityprompt(devaiprompt)
+end)
+
 Rare:NewButton("Rafaes (Cultist)", "Cultist Items", function()
 local rafaesprompt = game:GetService("Workspace").NPCs.Rafaes.HumanoidRootPart.DialogClick
 fireproximityprompt(rafaesprompt)
