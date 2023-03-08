@@ -4,13 +4,14 @@ local Window = Library.CreateLib("Pilgrammed", "Synapse")
 local Main = Window:NewTab("Main")
 local Shop = Window:NewTab("Shop")
 local TP = Window:NewTab("Teleport")
+local Potion = WIndow:NewTab("Potion")
 local Gemmer = Window:NewTab("Gem")
 local Settings = Window:NewTab("Settings")
 
 --[[ Section ]]--
 local Bank = Main:NewSection("Bank")
 local Loadout = Main:NewSection("Miscellaneous")
-local Daily = Shop:NewSection("Mela Daily Shop")
+local Daily = Shop:NewSection("Mela/Hobo Shop")
 local Scaven = Shop:NewSection("Ingredients")
 local Shorp = Shop:NewSection("Items")
 local Armos = Shop:NewSection("Armor/Accessory")
@@ -19,6 +20,7 @@ local Shosp = Shop:NewSection("Special Items")
 local wtf = Shop:NewSection("What The Fuck")
 local Teleport = TP:NewSection("Island")
 local Boss = TP:NewSection("Boss")
+local Poton = Potion:NewSection("Potion Recipes")
 local Remo = Gemmer:NewSection("Remove Gem")
 local Gemo = Gemmer:NewSection("Install Gem")
 local Settings = Settings:NewSection("Settings")
@@ -91,6 +93,8 @@ end)
 --[[ Shop ]]--
 
 -- Daily Shop --
+
+Daily:NewLabel("Press 3 ots for requirements")
 
 Daily:NewButton("Silent Powder", "750 Gold, Gunpowder, 10 Pink Slime, 8 Zinc", function()
     daily1:InvokeServer("Silent Powder")
@@ -503,6 +507,126 @@ Boss:NewDropdown("Special Boss", "Teleport to specific special boss", {"Granny",
    elseif SelectedLocation == "N" then
        RFrame = CFrame.new(94, 42, -3741)  
    end
+end)
+
+--[[ Potion ]]--
+
+Poton:NewDropdown("Potions", "", {"Health", "Damage", "Gold"}, function(op)
+    c = op
+end)
+Poton:NewButton("Create Potion", "Creates choosed potion", function()
+    if c == "Health" then
+    local args = {
+        [1] = {
+            [1] = "Sinister Fruit",
+            [2] = "Sinister Fruit",
+            [3] = "Sinister Fruit",
+            [4] = "Sinister Fruit",
+            [5] = "Sinister Fruit"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.Cauldron:FireServer(unpack(args)) end
+    if c == "Health 2" then
+        local args = {
+            [1] = {
+                [1] = "Salmon",
+                [2] = "Salmon",
+                [3] = "Salmon",
+                [4] = "Salmon",
+                [5] = "Salmon"
+            }
+        }
+        
+        game:GetService("ReplicatedStorage").Remotes.Cauldron:FireServer(unpack(args)) end
+    if c == "Damage" then
+    local args = {
+        [1] = {
+            [1] = "Rage Berry",
+            [2] = "Rage Berry",
+            [3] = "Rage Berry",
+            [4] = "Shrimp",
+            [5] = "Magma Slime"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.Cauldron:FireServer(unpack(args))
+     end
+    if c == "Gold" then 
+    local args = {
+        [1] = {
+            [1] = "Gold Dust",
+            [2] = "Gold Dust",
+            [3] = "Gold Dust",
+            [4] = "Blue Slime",
+            [5] = "Magma Slime"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.Cauldron:FireServer(unpack(args))
+     end
+     if c == "Speed 6" then
+    local args = {
+        [1] = {
+            [1] = "Coconut",
+            [2] = "Coconut",
+            [3] = "Coconut",
+            [4] = "Coconut",
+            [5] = "Sugar"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.Cauldron:FireServer(unpack(args))
+end
+if c == "Speed 10" then
+    local args = {
+        [1] = {
+            [1] = "Sugar",
+            [2] = "Sugar",
+            [3] = "Sugar",
+            [4] = "Sugar",
+            [5] = "Sugar"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.Cauldron:FireServer(unpack(args))
+end
+if c == "Speed 8.5" then
+    local args = {
+        [1] = {
+            [1] = "Shrimp",
+            [2] = "Sugar",
+            [3] = "Sugar",
+            [4] = "Sugar",
+            [5] = "Sugar"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.Cauldron:FireServer(unpack(args))
+end
+if c == "Speed 7.75" then
+    local args = {
+        [1] = {
+            [1] = "Shrimp",
+            [2] = "Coconut",
+            [3] = "Sugar",
+            [4] = "Sugar",
+            [5] = "Sugar"
+        }
+    }
+    
+    game:GetService("ReplicatedStorage").Remotes.Cauldron:FireServer(unpack(args))
+end
+end)
+Poton:NewButton("Check Recipe", "Tells recipe of choosed potion", function()
+    if c == "Health" then game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Recipe",Text = "5 Sinister Fruit",}) end
+    if c == "Health 2" then game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Recipe",Text = "5 Salmon",}) end
+    if c == "Damage" then game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Recipe",Text = "3 Rage Berry, 1 Shrimp, 1 Magma Slime",}) end
+    if c == "Gold" then game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Recipe",Text = "3 Gold Dust, 1 Blue Slime, Magma Slime",}) end
+    if c == "Speed 6" then game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Recipe",Text = "4 Coconut, 1 Sugar",}) end
+    if c == "Speed 10" then game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Recipe",Text = "4 Coconut, 5 Sugar",}) end
+    if c == "Speed 8.5" then game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Recipe",Text = "1 Shrimp, 4 Sugar",}) end
+    if c == "Speed 7.75" then game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Recipe",Text = "1 Coconut, 1 Shrimp, 3 Sugar",}) end
 end)
 
 --[[ Gem ]]--
