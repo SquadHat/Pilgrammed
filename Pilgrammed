@@ -10,16 +10,25 @@ local Settings = Window:NewTab("Settings")
 --[[ Section ]]--
 local Bank = Main:NewSection("Bank")
 local Loadout = Main:NewSection("Miscellaneous")
+local Daily = Shop:NewSection("Mela/Hobo Shop")
 local Scaven = Shop:NewSection("Ingredients")
 local Shorp = Shop:NewSection("Items")
 local Armos = Shop:NewSection("Armor/Accessory")
 local Rare = Shop:NewSection("Others")
 local Shosp = Shop:NewSection("Special Items")
+local wtf = Shop:NewSection("What The Fuck")
 local Teleport = TP:NewSection("Island")
 local Boss = TP:NewSection("Boss")
 local Remo = Gemmer:NewSection("Remove Gem")
 local Gemo = Gemmer:NewSection("Install Gem")
 local Settings = Settings:NewSection("Settings")
+
+--[[ Remotes ]]--
+local Races = game:GetService("ReplicatedStorage").Remotes.Skill
+local RFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local Gesm = game:GetService("ReplicatedStorage").Remotes.Gem
+local npcsr = game:GetService("Workspace").NPCs
+local daily1 = game:GetService("ReplicatedStorage").Remotes.Buy
 
 --[[ Main ]]--
 
@@ -69,27 +78,71 @@ end)
 
 Loadout:NewDropdown("Race", "Change Race", {"Imp","Human","Ice Imp","Vampire"}, function(SelectedLocation)
    if SelectedLocation == "Imp" then
-game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Imp")
+Races:FireServer("Imp")
    elseif SelectedLocation == "Human" then
-game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Reaper")
+Races:FireServer("Reaper")
    elseif SelectedLocation == "Ice Imp" then
-game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Ice")
+Races:FireServer("Ice")
    elseif SelectedLocation == "Vampire" then
-game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Vampire")
+Races:FireServer("Vampire")
    end
 end)
 
 --[[ Shop ]]--
 
+-- Daily Shop --
+
+Daily:NewLabel("Press 3 ots for requirements")
+
+Daily:NewButton("Silent Powder", "750 Gold, Gunpowder, 10 Pink Slime, 8 Zinc", function()
+    daily1:InvokeServer("Silent Powder")
+end)
+    
+Daily:NewButton("Diamond Ring", "2500 Gold, 3 Diamond", function()
+    daily1:InvokeServer("Diamond Ring")
+end)
+
+Daily:NewButton("Harmed Energy", "800 Gold", function()
+    daily1:InvokeServer("Harmed Energy")
+end)
+
+Daily:NewButton("Unharmed Energy", "800 Gold", function()
+    daily1:InvokeServer("Unharmed Energy")
+end)
+
+Daily:NewButton("Gold Dust", "25 Gold", function()
+    daily1:InvokeServer("Gold Dust")
+end)
+
+Daily:NewButton("The Bulwark", "2500 Gold, 12 Iron, 8 Brass, 1 Diamond", function()
+    daily1:InvokeServer("The Bulwark")
+end)
+
+Daily:NewButton("Applehead", "50K Gold", function()
+    daily1:InvokeServer("Applehead")
+end)
+
+Daily:NewButton("Prime Scepter", "2500 Gold, 1 Prime Brand, Magic Branch", function()
+    daily1:InvokeServer("Prime Scepter")
+end)
+
+Daily:NewButton("Black Belt", "1500 Gold", function()
+    daily1:InvokeServer("Black Belt")
+end)
+
+Daily:NewButton("Mana Bullets", "1000 Gold, Piercing Bullets, 25 Arcane Essence", function()
+    daily1:InvokeServer("Mana Bullets")
+end)
+
 -- Ingredients --
 
 Scaven:NewButton("Mela", "Open Mela Shop", function()
-local melaprompt = game:GetService("Workspace").NPCs.Mela.HumanoidRootPart.DialogClick
+local melaprompt = npcsr.Mela.HumanoidRootPart.DialogClick
 fireproximityprompt(melaprompt)
 end)
 
 Scaven:NewButton("Pomme", "Open Pomme Ingredients Shop", function()
-local pommeprompt = game:GetService("Workspace").NPCs.Pomme.HumanoidRootPart.DialogClick
+local pommeprompt = npcsr.Pomme.HumanoidRootPart.DialogClick
 fireproximityprompt(pommeprompt)
 end)
 
@@ -99,191 +152,268 @@ fireproximityprompt(potcupprompt)
 end)
 
 Scaven:NewButton("Nebraska", "Open Nebraska Wares", function()
-local nebraskaprompt = game:GetService("Workspace").NPCs.Nebraska.HumanoidRootPart.DialogClick
+local nebraskaprompt = npcsr.Nebraska.HumanoidRootPart.DialogClick
 fireproximityprompt(nebraskaprompt)
 end)
 
 -- Items --
 
 Shorp:NewButton("Blacksmith (Prairie)", "Open Blacksmith Shop", function()
-local blacksmithprompt = game:GetService("Workspace").NPCs.Blacksmith.HumanoidRootPart.DialogClick
+local blacksmithprompt = npcsr.Blacksmith.HumanoidRootPart.DialogClick
 fireproximityprompt(blacksmithprompt)
 end)
 
 Shorp:NewButton("Archer (Prairie)", "Open Archer Shop", function()
-local archerprompt = game:GetService("Workspace").NPCs.Archer.HumanoidRootPart.DialogClick
+local archerprompt = npcsr.Archer.HumanoidRootPart.DialogClick
 fireproximityprompt(archerprompt)
 end)
 
 Shorp:NewButton("Gorlan (Desert)", "Open Gorlan Shop", function()
-local gorlanprompt = game:GetService("Workspace").NPCs.Gorlan.HumanoidRootPart.DialogClick
+local gorlanprompt = npcsr.Gorlan.HumanoidRootPart.DialogClick
 fireproximityprompt(gorlanprompt)
 end)
 
 Shorp:NewButton("Verdant (Savannah)", "Open Verdant Shop", function()
-local verdantprompt = game:GetService("Workspace").NPCs.Verdant.HumanoidRootPart.DialogClick
+local verdantprompt = npcsr.Verdant.HumanoidRootPart.DialogClick
 fireproximityprompt(verdantprompt)
 end)
 
 Shorp:NewButton("Friendly Witch (Swamp)", "Open Witch Shop", function()
-local verdantprompt = game:GetService("Workspace").NPCs["Friendly Witch"].HumanoidRootPart.DialogClick
+local verdantprompt = npcsr["Friendly Witch"].HumanoidRootPart.DialogClick
 fireproximityprompt(verdantprompt)
 end)
 
 Shorp:NewButton("Oglorn (Volcano)", "Open Oglorn Shop", function()
-local oglornprompt = game:GetService("Workspace").NPCs.Oglorn.HumanoidRootPart.DialogClick
+local oglornprompt = npcsr.Oglorn.HumanoidRootPart.DialogClick
 fireproximityprompt(oglornprompt)
 end)
 
 Shorp:NewButton("Fimbul (Mountain)", "Open Fimbul Shop", function()
-local fimbulprompt = game:GetService("Workspace").NPCs.Fimbul.HumanoidRootPart.DialogClick
+local fimbulprompt = npcsr.Fimbul.HumanoidRootPart.DialogClick
 fireproximityprompt(fimbulprompt)
 end)
 
 Shorp:NewButton("Clever (Cloud City)", "Open Clever Shop", function()
-local cleverprompt = game:GetService("Workspace").NPCs.Clever.HumanoidRootPart.DialogClick
+local cleverprompt = npcsr.Clever.HumanoidRootPart.DialogClick
 fireproximityprompt(cleverprompt)
 end)
 
 -- Armor --
 
 Armos:NewButton("Gerald (Prairie)", "Open Gerald Shop", function()
-local geraldprompt = game:GetService("Workspace").NPCs.Gerald.HumanoidRootPart.DialogClick
+local geraldprompt = npcsr.Gerald.HumanoidRootPart.DialogClick
 fireproximityprompt(geraldprompt)
 end)
 
 Armos:NewButton("Lorgan (Desert)", "Open Lorgan Shop", function()
-local lorganprompt = game:GetService("Workspace").NPCs.Lorgan.HumanoidRootPart.DialogClick
+local lorganprompt = npcsr.Lorgan.HumanoidRootPart.DialogClick
 fireproximityprompt(lorganprompt)
 end)
 
 Armos:NewButton("Kennit (Savannah)", "Open Kennit Shop", function()
-local kennitprompt = game:GetService("Workspace").NPCs.Kennit.HumanoidRootPart.DialogClick
+local kennitprompt = npcsr.Kennit.HumanoidRootPart.DialogClick
 fireproximityprompt(kennitprompt)
 end)
 
 Armos:NewButton("Galon (Volcano)", "Open Galon Shop", function()
-local galonprompt = game:GetService("Workspace").NPCs.Galon.HumanoidRootPart.DialogClick
+local galonprompt = npcsr.Galon.HumanoidRootPart.DialogClick
 fireproximityprompt(galonprompt)
 end)
 
 Armos:NewButton("Lunge (Mountain)", "Open Mountain Shop", function()
-local lungeprompt = game:GetService("Workspace").NPCs.Lunge.HumanoidRootPart.DialogClick
+local lungeprompt = npcsr.Lunge.HumanoidRootPart.DialogClick
 fireproximityprompt(lungeprompt)
 end)
 
 Armos:NewButton("William (Cloud City)", "Open William Shop", function()
-local williamprompt = game:GetService("Workspace").NPCs.William.HumanoidRootPart.DialogClick
+local williamprompt = npcsr.William.HumanoidRootPart.DialogClick
 fireproximityprompt(williamprompt)
 end)
 
 -- Others --
 
 Rare:NewButton("Talvern (Gem)", "Open Talvern Gem Enchant Shop", function()
-local talvernprompt = game:GetService("Workspace").NPCs.Talvern.HumanoidRootPart.DialogClick
+local talvernprompt = npcsr.Talvern.HumanoidRootPart.DialogClick
 fireproximityprompt(talvernprompt)
 end)
 
 Rare:NewButton("Billy (Observatory)", "Open Billy Shop", function()
-local billyprompt = game:GetService("Workspace").NPCs.Billy.HumanoidRootPart.DialogClick
+local billyprompt = npcsr.Billy.HumanoidRootPart.DialogClick
 fireproximityprompt(billyprompt)
 end)
 
 Rare:NewButton("Capillus (Avatar)", "Change Avatar", function()
-local capillusprompt = game:GetService("Workspace").NPCs.Capillus.HumanoidRootPart.DialogClick
+local capillusprompt = npcsr.Capillus.HumanoidRootPart.DialogClick
 fireproximityprompt(capillusprompt)
 end)
 
 Rare:NewButton("Jared (Fisherman)", "Fisherman Items", function()
-local jaredprompt = game:GetService("Workspace").NPCs.Jared.HumanoidRootPart.DialogClick
+local jaredprompt = npcsr.Jared.HumanoidRootPart.DialogClick
 fireproximityprompt(jaredprompt)
 end)
 
 Rare:NewButton("Dyler (Dye Items)", "Dye your items", function()
-local dylerprompt = game:GetService("Workspace").NPCs.Dyler.HumanoidRootPart.DialogClick
+local dylerprompt = npcsr.Dyler.HumanoidRootPart.DialogClick
 fireproximityprompt(dylerprompt)
 end)
 
 Rare:NewButton("Simon (Vampire Island)", "Vampire Items", function()
-local simonprompt = game:GetService("Workspace").NPCs.Simon.HumanoidRootPart.DialogClick
+local simonprompt = npcsr.Simon.HumanoidRootPart.DialogClick
 fireproximityprompt(simonprompt)
 end)
 
 Rare:NewButton("Mr Pumpkino (Patchland)", "Creepy Items", function()
-local pumpkinprompt = game:GetService("Workspace").NPCs["Mr. Pumpkino"].Body.DialogClick
+local pumpkinprompt = npcsr["Mr. Pumpkino"].Body.DialogClick
 fireproximityprompt(pumpkinprompt)
 end)
 
 Rare:NewButton("Devai (Kai Items)", "Kai guy accessories armour", function()
-local devaiprompt = game:GetService("Workspace").NPCs.Devai.HumanoidRootPart.DialogClick
+local devaiprompt = npcsr.Devai.HumanoidRootPart.DialogClick
 fireproximityprompt(devaiprompt)
 end)
 
 Rare:NewButton("Rafaes (Cultist)", "Cultist Items", function()
-local rafaesprompt = game:GetService("Workspace").NPCs.Rafaes.HumanoidRootPart.DialogClick
+local rafaesprompt = npcsr.Rafaes.HumanoidRootPart.DialogClick
 fireproximityprompt(rafaesprompt)
+end)
+
+Rare:NewButton("Hobo (Forest)", "Hobo Items", function()
+local hoboprompt = npcsr.Hobo.HumanoidRootPart.DialogClick
+fireproximityprompt(hoboprompt)
+end)
+
+Rare:NewButton("Scampi (Sinister Sea)", "Scampi Quest", function()
+local scampiprompt = npcsr.Scampi.HumanoidRootPart.DialogClick
+fireproximityprompt(scampiprompt)
+end)
+
+Rare:NewButton("Mira (Cloud Wilds)", "Mira Shop", function()
+local miraprompt = npcsr.Mira.HumanoidRootPart.DialogClick
+fireproximityprompt(miraprompt)
 end)
 
 -- Special Shop --
 
 Shosp:NewButton("Odd Sculpture", "Bag of gems", function()
-local oddprompt = game:GetService("Workspace").NPCs["Odd Sculpture"].HumanoidRootPart.DialogClick
+local oddprompt = npcsr["Odd Sculpture"].Root.DialogClick
 fireproximityprompt(oddprompt)
 end)
 
 Shosp:NewButton("Verdant (Copper Crystal)", "Copper Crystal Summon Shock Merauder", function()
-local verdantprompt = game:GetService("Workspace").NPCs.Verdant.HumanoidRootPart.DialogClick
+local verdantprompt = npcsr.Verdant.HumanoidRootPart.DialogClick
 fireproximityprompt(verdantprompt)
 end)
 
 Shosp:NewButton("Sailord (Boat/Boss)", "Upgrade Boat/Boss Npc", function()
-local sailordprompt = game:GetService("Workspace").NPCs.Sailord.HumanoidRootPart.DialogClick
+local sailordprompt = npcsr.Sailord.HumanoidRootPart.DialogClick
 fireproximityprompt(sailordprompt)
 end)
 
 Shosp:NewButton("Nebraska (Summon Boss)", "Normal Crystal/Unstable Crystal", function()
-local nebraskaprompt = game:GetService("Workspace").NPCs.Nebraska.HumanoidRootPart.DialogClick
+local nebraskaprompt = npcsr.Nebraska.HumanoidRootPart.DialogClick
 fireproximityprompt(nebraskaprompt)
 end)
 
-Shosp:NewButton("Gelida (???)", "", function()
-local gelidaprompt = game:GetService("Workspace").NPCs.Gelida.HumanoidRootPart.DialogClick
+-- wtf --
+
+wtf:NewButton("Gelida", "She got replaced", function()
+local gelidaprompt = npcsr.Gelida.HumanoidRootPart.DialogClick
 fireproximityprompt(gelidaprompt)
+end)
+
+wtf:NewButton("UYRDRSSUYU6", "Lyrics", function()
+local idkprompt = npcsr.UYRDRSSUYU6.Part.DialogClick
+fireproximityprompt(idkprompt)
+end)
+
+wtf:NewButton("Garcello?", "Garcello Statue", function()
+local garcelloprompt = npcsr["Venerable Statue"].garcello.DialogClick
+fireproximityprompt(garcelloprompt)
+end)
+
+wtf:NewButton("Strange Junk", "Rusty Ant?", function()
+local strangeprompt = npcsr["Strange Junk"].Body.DialogClick
+fireproximityprompt(strangeprompt)
+end)
+
+wtf:NewButton("Sans Statue", "Birds are singing", function()
+local sansprompt = npcsr["Elusive Statue"].Krabs.DialogClick
+fireproximityprompt(sansprompt)
+end)
+
+wtf:NewButton("Sans Statue 2", "weeds are burning", function()
+local sanssprompt = npcsr["Elusive Statue 2"].Krabs.DialogClick
+fireproximityprompt(sanssprompt)
+end)
+
+wtf:NewButton("Drake The Skeleton", "Ah, the skeleton", function()
+local drakeprompt = npcsr.Drake.HumanoidRootPart.Krabs.DialogClick
+fireproximityprompt(drakeprompt)
+end)
+
+wtf:NewButton("Cannon", "wanna ride?", function()
+local cannonprompt = npcsr.Cannon.Handle.DialogClick
+fireproximityprompt(cannonprompt)
+end)
+
+wtf:NewButton("Boonda", "I AM BOONDA", function()
+local boondaprompt = npcsr.BOONDA.HumanoidRootPart.DialogClick
+fireproximityprompt(boondaprompt)
+end)
+
+wtf:NewButton("Illusive Statue", "not real", function()
+local garcellooprompt = npcsr["Illusive Statue"].garcello.DialogClick
+fireproximityprompt(garcellooprompt)
+end)
+
+wtf:NewButton("Gaster", "beware", function()
+local gasterprompt = npcsr["W.D. Wingding"].Body.DialogClick
+fireproximityprompt(gasterprompt)
+end)
+
+wtf:NewButton("Ominous", "A Paper", function()
+local paperprompt = npcsr["Ominous Paper"].Part.DialogClick
+fireproximityprompt(paperprompt)
+end)
+
+wtf:NewButton("Ploma", "Purple Fruit", function()
+local paperprompt = npcsr.Ploma.HumanoidRootPart.DialogClick
+fireproximityprompt(paperprompt)
 end)
 
 --[[ Teleport ]]--
 
 Teleport:NewDropdown("Island", "Teleport to specific islands", {"Big Iron", "Blackened Island", "Bear Island", "Dark Tower Island", "Patchland Grove", "LOFI Island", "Vampire Island", "Mountain Basin", "Field", "Labyrinth", "Polar Bear Island", "Backdoor Island", "Patris Island", "Enchanted Island", "Eggroost Island"}, function(SelectedLocation)
     if SelectedLocation == "Big Iron" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2399, -17, -3098)
+       RFrame = CFrame.new(2399, -17, -3098)
    elseif SelectedLocation == "Blackened Island" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-52, -11, -4458)
+       RFrame = CFrame.new(-52, -11, -4458)
    elseif SelectedLocation == "Bear Island" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1463, 69, -130)
+       RFrame = CFrame.new(-1463, 69, -130)
    elseif SelectedLocation == "Dark Tower Island" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(889, -5, -5835)
+       RFrame = CFrame.new(889, -5, -5835)
    elseif SelectedLocation == "Patchland Grove" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2312, 1, 1044)
+       RFrame = CFrame.new(-2312, 1, 1044)
    elseif SelectedLocation == "LOFI Island" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3398, -293, -1502)
+       RFrame = CFrame.new(3398, -293, -1502)
    elseif SelectedLocation == "Vampire Island" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2795, -22, -2106)
+       RFrame = CFrame.new(2795, -22, -2106)
    elseif SelectedLocation == "Mountain Basin" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1404, -22, 988)
+       RFrame = CFrame.new(1404, -22, 988)
    elseif SelectedLocation == "Field" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7487, -460, 1006)
+       RFrame = CFrame.new(7487, -460, 1006)
    elseif SelectedLocation == "Labyrinth" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-147, -17, 2671)
+       RFrame = CFrame.new(-147, -17, 2671)
    elseif SelectedLocation == "Polar Bear Island" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(550, -21, 1617)
+       RFrame = CFrame.new(550, -21, 1617)
    elseif SelectedLocation == "Backdoor Island" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1973, -21, -5007)
+       RFrame = CFrame.new(-1973, -21, -5007)
    elseif SelectedLocation == "Patris Island" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3251, -22, -4615)
+       RFrame = CFrame.new(-3251, -22, -4615)
    elseif SelectedLocation == "Enchanted Island" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-824, -2, 1735)
+       RFrame = CFrame.new(-824, -2, 1735)
    elseif SelectedLocation == "Eggroost Island" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2070, 57, -3242)
+       RFrame = CFrame.new(-2070, 57, -3242)
    end
 end)
 
@@ -291,33 +421,33 @@ end)
 
 Teleport:NewDropdown("Places", "Teleport to specific places", {"Vermeil Village", "King Den", "Forest", "Desert", "Deep Desert", "Volcano", "Big Bay", "Savannah", "Swamp", "Cold Mountain", "Forgotten Village", "Cloud City", "Observatory", "Old Fart Gate"}, function(SelectedLocation)
     if SelectedLocation == "Vermeil Village" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(880, 8, -389)
+       RFrame = CFrame.new(880, 8, -389)
    elseif SelectedLocation == "King Den" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(873, 4, -235)
+       RFrame = CFrame.new(873, 4, -235)
    elseif SelectedLocation == "Forest" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-189, 132, -777)
+       RFrame = CFrame.new(-189, 132, -777)
    elseif SelectedLocation == "Desert" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(903, -0, -1843)
+       RFrame = CFrame.new(903, -0, -1843)
    elseif SelectedLocation == "Deep Desert" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(105, -23, -2605)
+       RFrame = CFrame.new(105, -23, -2605)
    elseif SelectedLocation == "Volcano" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1121, 152, -3833)
+       RFrame = CFrame.new(1121, 152, -3833)
    elseif SelectedLocation == "Big Bay" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2037, -21, -888)
+       RFrame = CFrame.new(2037, -21, -888)
    elseif SelectedLocation == "Savannah" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1760, 23, -1347)
+       RFrame = CFrame.new(1760, 23, -1347)
    elseif SelectedLocation == "Swamp" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(530, 32, -1692)
+       RFrame = CFrame.new(530, 32, -1692)
    elseif SelectedLocation == "Cold Mountain" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1228, 262, 100)
+       RFrame = CFrame.new(1228, 262, 100)
    elseif SelectedLocation == "Forgotten Village" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5608, -197, 2082)
+       RFrame = CFrame.new(5608, -197, 2082)
    elseif SelectedLocation == "Cloud City" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(701, 552, 2351)
+       RFrame = CFrame.new(701, 552, 2351)
    elseif SelectedLocation == "Observatory" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2529, 56, -2851)
+       RFrame = CFrame.new(-2529, 56, -2851)
    elseif SelectedLocation == "Old Fart Gate" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4780, -386, 1102)
+       RFrame = CFrame.new(4780, -386, 1102)
    end
 end)
 
@@ -325,29 +455,29 @@ end)
 
 Boss:NewDropdown("Boss", "Teleport to specific boss location", {"Thief King", "Yalgaroth", "Viperhead", "King Sandpod", "Pop Off Pirate", "Shock Merauder", "Mondo Squid", "Magma Turtle", "Ice King", "Abdominal Snowman", "Highway Son", "Archmage"}, function(SelectedLocation)
    if SelectedLocation == "Thief King" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(739, -15, 204)
+       RFrame = CFrame.new(739, -15, 204)
    elseif SelectedLocation == "Yalgaroth" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(441, -52, -176)
+       RFrame = CFrame.new(441, -52, -176)
    elseif SelectedLocation == "Viperhead" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(529, 79, -2286)
+       RFrame = CFrame.new(529, 79, -2286)
    elseif SelectedLocation == "King Sandpod" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(137, -17, -2113)
+       RFrame = CFrame.new(137, -17, -2113)
    elseif SelectedLocation == "Pop Off Pirate" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1871, -18, -218)
+       RFrame = CFrame.new(1871, -18, -218)
    elseif SelectedLocation == "Shock Merauder" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1410, -2, -1448)
+       RFrame = CFrame.new(1410, -2, -1448)
    elseif SelectedLocation == "Mondo Squid" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1976, 96, 1006)
+       RFrame = CFrame.new(1976, 96, 1006)
    elseif SelectedLocation == "Magma Turtle" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(577, 51, -3557)
+       RFrame = CFrame.new(577, 51, -3557)
    elseif SelectedLocation == "Ice King" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 464, 191)
+       RFrame = CFrame.new(1355, 464, 191)
    elseif SelectedLocation == "Abdominal Snowman" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1639, 402, 496)
+       RFrame = CFrame.new(1639, 402, 496)
    elseif SelectedLocation == "Highway Son" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2231, 561, 3451)
+       RFrame = CFrame.new(2231, 561, 3451)
    elseif SelectedLocation == "Archmage" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1031, 72, 1772)
+       RFrame = CFrame.new(-1031, 72, 1772)
    end
 end)
 
@@ -355,64 +485,64 @@ end)
 
 Boss:NewDropdown("Special Boss", "Teleport to specific special boss", {"Granny", "Executioner", "Sailord", "Kai Guy", "Big Fish","The Skeleton", "The Patris", "Prism Troll", "Old Fart", "N"}, function(SelectedLocation)
    if SelectedLocation == "Granny" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1359, 31, -3455)
+       RFrame = CFrame.new(1359, 31, -3455)
    elseif SelectedLocation == "Executioner" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1008, 548, 635)
+       RFrame = CFrame.new(1008, 548, 635)
    elseif SelectedLocation == "Sailord" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1905, -11, -1384)
+       RFrame = CFrame.new(1905, -11, -1384)
    elseif SelectedLocation == "Kai Guy" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1716, 186, 219)
+       RFrame = CFrame.new(1716, 186, 219)
    elseif SelectedLocation == "Big Fish" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-761, 43, -3350)
+       RFrame = CFrame.new(-761, 43, -3350)
    elseif SelectedLocation == "The Skeleton" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-190, -27, -4362)
+       RFrame = CFrame.new(-190, -27, -4362)
    elseif SelectedLocation == "The Patris" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3286, -19, -4534)
+       RFrame = CFrame.new(-3286, -19, -4534)
    elseif SelectedLocation == "Prism Troll" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(746, -256, 17)
+       RFrame = CFrame.new(746, -256, 17)
    elseif SelectedLocation == "Old Fart" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(7487, -460, 1006)
+       RFrame = CFrame.new(7487, -460, 1006)
    elseif SelectedLocation == "N" then
-       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(94, 42, -3741)  
+       RFrame = CFrame.new(94, 42, -3741)  
    end
 end)
 
 --[[ Gem ]]--
 
 Remo:NewButton("Remove Gem", "Remove The Currently Holding Weapon With Gem Reforged", function()
-game:GetService("ReplicatedStorage").Remotes.Gem:FireServer()
+Gesm:FireServer()
 end)
 
 Gemo:NewButton("Charm Gem", "Install Charm Gem on Holding Weapon", function()
-game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Charm Gem")
+Gesm:FireServer("Charm Gem")
 end)
 
 Gemo:NewButton("Blood Gem", "Install Blood Gem on Holding Weapon", function()
-game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Blood Gem")
+Gesm:FireServer("Blood Gem")
 end)
 
 Gemo:NewButton("Light Gem", "Install Light Gem on Holding Weapon", function()
-game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Light Gem")
+Gesm:FireServer("Light Gem")
 end)
 
 Gemo:NewButton("Frost Gem", "Install Frost Gem on Holding Weapon", function()
-game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Frost Gem")
+Gesm:FireServer("Frost Gem")
 end)
 
 Gemo:NewButton("Fire Gem", "Install Fire Gem on Holding Weapon", function()
-game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Fire Gem")
+Gesm:FireServer("Fire Gem")
 end)
 
 Gemo:NewButton("Magic Gem", "Install Magic Gem on Holding Weapon", function()
-game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Magic Gem")
+Gesm:FireServer("Magic Gem")
 end)
 
 Gemo:NewButton("Insignia Gem", "Install Insignia Gem on Holding Weapon", function()
-game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Insignia Gem")
+Gesm:FireServer("Insignia Gem")
 end)
 
 Gemo:NewButton("Explosive Gem", "Install Explosive Gem on Holding Weapon", function()
-game:GetService("ReplicatedStorage").Remotes.Gem:FireServer("Explosive Gem")
+Gesm:FireServer("Explosive Gem")
 end)
 
 --[[ Settings ]]--
