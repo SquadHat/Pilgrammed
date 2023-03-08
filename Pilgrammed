@@ -10,7 +10,7 @@ local Settings = Window:NewTab("Settings")
 --[[ Section ]]--
 local Bank = Main:NewSection("Bank")
 local Loadout = Main:NewSection("Miscellaneous")
-local Daily = Shop:NewSection("Mela/Hobo Shop")
+local Daily = Shop:NewSection("Mela Daily Shop")
 local Scaven = Shop:NewSection("Ingredients")
 local Shorp = Shop:NewSection("Items")
 local Armos = Shop:NewSection("Armor/Accessory")
@@ -91,8 +91,6 @@ end)
 --[[ Shop ]]--
 
 -- Daily Shop --
-
-Daily:NewLabel("Press 3 ots for requirements")
 
 Daily:NewButton("Silent Powder", "750 Gold, Gunpowder, 10 Pink Slime, 8 Zinc", function()
     daily1:InvokeServer("Silent Powder")
