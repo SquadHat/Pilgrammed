@@ -4,7 +4,7 @@ local Window = Library.CreateLib("Pilgrammed", "Synapse")
 local Main = Window:NewTab("Main")
 local Shop = Window:NewTab("Shop")
 local TP = Window:NewTab("Teleport")
-local Potion = WIndow:NewTab("Potion")
+local Potion = Window:NewTab("Potion")
 local Gemmer = Window:NewTab("Gem")
 local Settings = Window:NewTab("Settings")
 
