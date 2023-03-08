@@ -511,7 +511,7 @@ end)
 
 --[[ Potion ]]--
 
-Poton:NewDropdown("Potions", "", {"Health", "Damage", "Gold"}, function(op)
+Poton:NewDropdown("Potions", "", {"Health", "Health 2", "Damage", "Gold", "Speed 6", "Speed 7.75", "Speed 8.5", "Speed 10"}, function(op)
     c = op
 end)
 Poton:NewButton("Create Potion", "Creates choosed potion", function()
