@@ -30,7 +30,7 @@ local Settings = Settings:NewSection("Settings")
 
 --[[ Remotes ]]--
 local Races = game:GetService("ReplicatedStorage").Remotes.Skill
-local RFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local TPTO = game.Players.LocalPlayer.Character.HumanoidRootPart
 local Gesm = game:GetService("ReplicatedStorage").Remotes.Gem
 local npcsr = game:GetService("Workspace").NPCs
 local daily1 = game:GetService("ReplicatedStorage").Remotes.Buy
@@ -397,35 +397,35 @@ end)
 
 Teleport:NewDropdown("Island", "Teleport to specific islands", {"Big Iron", "Blackened Island", "Bear Island", "Dark Tower Island", "Patchland Grove", "LOFI Island", "Vampire Island", "Mountain Basin", "Field", "Labyrinth", "Polar Bear Island", "Backdoor Island", "Patris Island", "Enchanted Island", "Eggroost Island"}, function(SelectedLocation)
     if SelectedLocation == "Big Iron" then
-       RFrame = CFrame.new(2399, -17, -3098)
+       TPTO.CFrame = CFrame.new(2382, -22, -3319)
    elseif SelectedLocation == "Blackened Island" then
-       RFrame = CFrame.new(-52, -11, -4458)
+       TPTO.CFrame = CFrame.new(-52, -11, -4458)
    elseif SelectedLocation == "Bear Island" then
-       RFrame = CFrame.new(-1463, 69, -130)
+       TPTO.CFrame = CFrame.new(-1463, 69, -130)
    elseif SelectedLocation == "Dark Tower Island" then
-       RFrame = CFrame.new(889, -5, -5835)
+       TPTO.CFrame = CFrame.new(889, -5, -5835)
    elseif SelectedLocation == "Patchland Grove" then
-       RFrame = CFrame.new(-2312, 1, 1044)
+       TPTO.CFrame = CFrame.new(-2312, 1, 1044)
    elseif SelectedLocation == "LOFI Island" then
-       RFrame = CFrame.new(3398, -293, -1502)
+       TPTO.CFrame = CFrame.new(3398, -293, -1502)
    elseif SelectedLocation == "Vampire Island" then
-       RFrame = CFrame.new(2795, -22, -2106)
+       TPTO.CFrame = CFrame.new(2795, -22, -2106)
    elseif SelectedLocation == "Mountain Basin" then
-       RFrame = CFrame.new(1404, -22, 988)
+       TPTO.CFrame = CFrame.new(1404, -22, 988)
    elseif SelectedLocation == "Field" then
-       RFrame = CFrame.new(7487, -460, 1006)
+       TPTO.CFrame = CFrame.new(7487, -460, 1006)
    elseif SelectedLocation == "Labyrinth" then
-       RFrame = CFrame.new(-147, -17, 2671)
+       TPTO.CFrame = CFrame.new(-147, -17, 2671)
    elseif SelectedLocation == "Polar Bear Island" then
-       RFrame = CFrame.new(550, -21, 1617)
+       TPTO.CFrame = CFrame.new(550, -21, 1617)
    elseif SelectedLocation == "Backdoor Island" then
-       RFrame = CFrame.new(-1973, -21, -5007)
+       TPTO.CFrame = CFrame.new(-1973, -21, -5007)
    elseif SelectedLocation == "Patris Island" then
-       RFrame = CFrame.new(-3251, -22, -4615)
+       TPTO.CFrame = CFrame.new(-3251, -22, -4615)
    elseif SelectedLocation == "Enchanted Island" then
-       RFrame = CFrame.new(-824, -2, 1735)
+       TPTO.CFrame = CFrame.new(-824, -2, 1735)
    elseif SelectedLocation == "Eggroost Island" then
-       RFrame = CFrame.new(-2070, 57, -3242)
+       TPTO.CFrame = CFrame.new(-2070, 57, -3242)
    end
 end)
 
@@ -433,33 +433,33 @@ end)
 
 Teleport:NewDropdown("Places", "Teleport to specific places", {"Vermeil Village", "King Den", "Forest", "Desert", "Deep Desert", "Volcano", "Big Bay", "Savannah", "Swamp", "Cold Mountain", "Forgotten Village", "Cloud City", "Observatory", "Old Fart Gate"}, function(SelectedLocation)
     if SelectedLocation == "Vermeil Village" then
-       RFrame = CFrame.new(880, 8, -389)
+       TPTO.CFrame = CFrame.new(880, 8, -389)
    elseif SelectedLocation == "King Den" then
-       RFrame = CFrame.new(873, 4, -235)
+       TPTO.CFrame = CFrame.new(873, 4, -235)
    elseif SelectedLocation == "Forest" then
-       RFrame = CFrame.new(-189, 132, -777)
+       TPTO.CFrame = CFrame.new(-189, 132, -777)
    elseif SelectedLocation == "Desert" then
-       RFrame = CFrame.new(903, -0, -1843)
+       TPTO.CFrame = CFrame.new(903, -0, -1843)
    elseif SelectedLocation == "Deep Desert" then
-       RFrame = CFrame.new(105, -23, -2605)
+       TPTO.CFrame = CFrame.new(105, -23, -2605)
    elseif SelectedLocation == "Volcano" then
-       RFrame = CFrame.new(1121, 152, -3833)
+       TPTO.CFrame = CFrame.new(1121, 152, -3833)
    elseif SelectedLocation == "Big Bay" then
-       RFrame = CFrame.new(2037, -21, -888)
+       TPTO.CFrame = CFrame.new(2037, -21, -888)
    elseif SelectedLocation == "Savannah" then
-       RFrame = CFrame.new(1760, 23, -1347)
+       TPTO.CFrame = CFrame.new(1760, 23, -1347)
    elseif SelectedLocation == "Swamp" then
-       RFrame = CFrame.new(530, 32, -1692)
+       TPTO.CFrame = CFrame.new(530, 32, -1692)
    elseif SelectedLocation == "Cold Mountain" then
-       RFrame = CFrame.new(1228, 262, 100)
+       TPTO.CFrame = CFrame.new(1228, 262, 100)
    elseif SelectedLocation == "Forgotten Village" then
-       RFrame = CFrame.new(5608, -197, 2082)
+       TPTO.CFrame = CFrame.new(5608, -197, 2082)
    elseif SelectedLocation == "Cloud City" then
-       RFrame = CFrame.new(701, 552, 2351)
+       TPTO.CFrame = CFrame.new(701, 552, 2351)
    elseif SelectedLocation == "Observatory" then
-       RFrame = CFrame.new(-2529, 56, -2851)
+       TPTO.CFrame = CFrame.new(-2529, 56, -2851)
    elseif SelectedLocation == "Old Fart Gate" then
-       RFrame = CFrame.new(4780, -386, 1102)
+       TPTO.CFrame = CFrame.new(4780, -386, 1102)
    end
 end)
 
@@ -467,29 +467,29 @@ end)
 
 Boss:NewDropdown("Boss", "Teleport to specific boss location", {"Thief King", "Yalgaroth", "Viperhead", "King Sandpod", "Pop Off Pirate", "Shock Merauder", "Mondo Squid", "Magma Turtle", "Ice King", "Abdominal Snowman", "Highway Son", "Archmage"}, function(SelectedLocation)
    if SelectedLocation == "Thief King" then
-       RFrame = CFrame.new(739, -15, 204)
+       TPTO.CFrame = CFrame.new(739, -15, 204)
    elseif SelectedLocation == "Yalgaroth" then
-       RFrame = CFrame.new(441, -52, -176)
+       TPTO.CFrame = CFrame.new(441, -52, -176)
    elseif SelectedLocation == "Viperhead" then
-       RFrame = CFrame.new(529, 79, -2286)
+       TPTO.CFrame = CFrame.new(529, 79, -2286)
    elseif SelectedLocation == "King Sandpod" then
-       RFrame = CFrame.new(137, -17, -2113)
+       TPTO.CFrame = CFrame.new(137, -17, -2113)
    elseif SelectedLocation == "Pop Off Pirate" then
-       RFrame = CFrame.new(1871, -18, -218)
+       TPTO.CFrame = CFrame.new(1871, -18, -218)
    elseif SelectedLocation == "Shock Merauder" then
-       RFrame = CFrame.new(1410, -2, -1448)
+       TPTO.CFrame = CFrame.new(1410, -2, -1448)
    elseif SelectedLocation == "Mondo Squid" then
-       RFrame = CFrame.new(1976, 96, 1006)
+       TPTO.CFrame = CFrame.new(1976, 96, 1006)
    elseif SelectedLocation == "Magma Turtle" then
-       RFrame = CFrame.new(577, 51, -3557)
+       TPTO.CFrame = CFrame.new(577, 51, -3557)
    elseif SelectedLocation == "Ice King" then
-       RFrame = CFrame.new(1355, 464, 191)
+       TPTO.CFrame = CFrame.new(1355, 464, 191)
    elseif SelectedLocation == "Abdominal Snowman" then
-       RFrame = CFrame.new(1639, 402, 496)
+       TPTO.CFrame = CFrame.new(1639, 402, 496)
    elseif SelectedLocation == "Highway Son" then
-       RFrame = CFrame.new(2231, 561, 3451)
+       TPTO.CFrame = CFrame.new(2231, 561, 3451)
    elseif SelectedLocation == "Archmage" then
-       RFrame = CFrame.new(-1031, 72, 1772)
+       TPTO.CFrame = CFrame.new(-1031, 72, 1772)
    end
 end)
 
@@ -497,25 +497,25 @@ end)
 
 Boss:NewDropdown("Special Boss", "Teleport to specific special boss", {"Granny", "Executioner", "Sailord", "Kai Guy", "Big Fish","The Skeleton", "The Patris", "Prism Troll", "Old Fart", "N"}, function(SelectedLocation)
    if SelectedLocation == "Granny" then
-       RFrame = CFrame.new(1359, 31, -3455)
+       TPTO.CFrame = CFrame.new(1359, 31, -3455)
    elseif SelectedLocation == "Executioner" then
-       RFrame = CFrame.new(1008, 548, 635)
+       TPTO.CFrame = CFrame.new(1008, 548, 635)
    elseif SelectedLocation == "Sailord" then
-       RFrame = CFrame.new(1905, -11, -1384)
+       TPTO.CFrame = CFrame.new(1905, -11, -1384)
    elseif SelectedLocation == "Kai Guy" then
-       RFrame = CFrame.new(1716, 186, 219)
+       TPTO.CFrame = CFrame.new(1716, 186, 219)
    elseif SelectedLocation == "Big Fish" then
-       RFrame = CFrame.new(-761, 43, -3350)
+       TPTO.CFrame = CFrame.new(-761, 43, -3350)
    elseif SelectedLocation == "The Skeleton" then
-       RFrame = CFrame.new(-190, -27, -4362)
+       TPTO.CFrame = CFrame.new(-190, -27, -4362)
    elseif SelectedLocation == "The Patris" then
-       RFrame = CFrame.new(-3286, -19, -4534)
+       TPTO.CFrame = CFrame.new(-3286, -19, -4534)
    elseif SelectedLocation == "Prism Troll" then
-       RFrame = CFrame.new(746, -256, 17)
+       TPTO.CFrame = CFrame.new(746, -256, 17)
    elseif SelectedLocation == "Old Fart" then
-       RFrame = CFrame.new(7487, -460, 1006)
+       TPTO.CFrame = CFrame.new(7487, -460, 1006)
    elseif SelectedLocation == "N" then
-       RFrame = CFrame.new(94, 42, -3741)  
+       TPTO.CFrame = CFrame.new(94, 42, -3741)  
    end
 end)
 
