@@ -30,7 +30,7 @@ local Settings = Settings:NewSection("Settings")
 
 --[[ Remotes ]]--
 local Races = game:GetService("ReplicatedStorage").Remotes.Skill
-local TPTO = game.Players.LocalPlayer.Character.HumanoidRootPart
+local TPTO = game.Players.LocalPlayer
 local Gesm = game:GetService("ReplicatedStorage").Remotes.Gem
 local npcsr = game:GetService("Workspace").NPCs
 local daily1 = game:GetService("ReplicatedStorage").Remotes.Buy
@@ -433,33 +433,33 @@ end)
 
 Teleport:NewDropdown("Places", "Teleport to specific places", {"Vermeil Village", "King Den", "Forest", "Desert", "Deep Desert", "Volcano", "Big Bay", "Savannah", "Swamp", "Cold Mountain", "Forgotten Village", "Cloud City", "Observatory", "Old Fart Gate"}, function(SelectedLocation)
     if SelectedLocation == "Vermeil Village" then
-       TPTO.CFrame = CFrame.new(880, 8, -389)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(880, 8, -389)
    elseif SelectedLocation == "King Den" then
-       TPTO.CFrame = CFrame.new(873, 4, -235)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(873, 4, -235)
    elseif SelectedLocation == "Forest" then
-       TPTO.CFrame = CFrame.new(-189, 132, -777)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-189, 132, -777)
    elseif SelectedLocation == "Desert" then
-       TPTO.CFrame = CFrame.new(903, -0, -1843)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(903, -0, -1843)
    elseif SelectedLocation == "Deep Desert" then
-       TPTO.CFrame = CFrame.new(105, -23, -2605)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(105, -23, -2605)
    elseif SelectedLocation == "Volcano" then
-       TPTO.CFrame = CFrame.new(1121, 152, -3833)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1121, 152, -3833)
    elseif SelectedLocation == "Big Bay" then
-       TPTO.CFrame = CFrame.new(2037, -21, -888)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(2037, -21, -888)
    elseif SelectedLocation == "Savannah" then
-       TPTO.CFrame = CFrame.new(1760, 23, -1347)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1760, 23, -1347)
    elseif SelectedLocation == "Swamp" then
-       TPTO.CFrame = CFrame.new(530, 32, -1692)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(530, 32, -1692)
    elseif SelectedLocation == "Cold Mountain" then
-       TPTO.CFrame = CFrame.new(1228, 262, 100)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1228, 262, 100)
    elseif SelectedLocation == "Forgotten Village" then
-       TPTO.CFrame = CFrame.new(5608, -197, 2082)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(5608, -197, 2082)
    elseif SelectedLocation == "Cloud City" then
-       TPTO.CFrame = CFrame.new(701, 552, 2351)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(701, 552, 2351)
    elseif SelectedLocation == "Observatory" then
-       TPTO.CFrame = CFrame.new(-2529, 56, -2851)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-2529, 56, -2851)
    elseif SelectedLocation == "Old Fart Gate" then
-       TPTO.CFrame = CFrame.new(4780, -386, 1102)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(4780, -386, 1102)
    end
 end)
 
@@ -467,29 +467,29 @@ end)
 
 Boss:NewDropdown("Boss", "Teleport to specific boss location", {"Thief King", "Yalgaroth", "Viperhead", "King Sandpod", "Pop Off Pirate", "Shock Merauder", "Mondo Squid", "Magma Turtle", "Ice King", "Abdominal Snowman", "Highway Son", "Archmage"}, function(SelectedLocation)
    if SelectedLocation == "Thief King" then
-       TPTO.CFrame = CFrame.new(739, -15, 204)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(739, -15, 204)
    elseif SelectedLocation == "Yalgaroth" then
-       TPTO.CFrame = CFrame.new(441, -52, -176)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(441, -52, -176)
    elseif SelectedLocation == "Viperhead" then
-       TPTO.CFrame = CFrame.new(529, 79, -2286)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(529, 79, -2286)
    elseif SelectedLocation == "King Sandpod" then
-       TPTO.CFrame = CFrame.new(137, -17, -2113)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(137, -17, -2113)
    elseif SelectedLocation == "Pop Off Pirate" then
-       TPTO.CFrame = CFrame.new(1871, -18, -218)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1871, -18, -218)
    elseif SelectedLocation == "Shock Merauder" then
-       TPTO.CFrame = CFrame.new(1410, -2, -1448)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1410, -2, -1448)
    elseif SelectedLocation == "Mondo Squid" then
-       TPTO.CFrame = CFrame.new(1976, 96, 1006)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1976, 96, 1006)
    elseif SelectedLocation == "Magma Turtle" then
-       TPTO.CFrame = CFrame.new(577, 51, -3557)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(577, 51, -3557)
    elseif SelectedLocation == "Ice King" then
-       TPTO.CFrame = CFrame.new(1355, 464, 191)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1355, 464, 191)
    elseif SelectedLocation == "Abdominal Snowman" then
-       TPTO.CFrame = CFrame.new(1639, 402, 496)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1639, 402, 496)
    elseif SelectedLocation == "Highway Son" then
-       TPTO.CFrame = CFrame.new(2231, 561, 3451)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(2231, 561, 3451)
    elseif SelectedLocation == "Archmage" then
-       TPTO.CFrame = CFrame.new(-1031, 72, 1772)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-1031, 72, 1772)
    end
 end)
 
@@ -497,25 +497,25 @@ end)
 
 Boss:NewDropdown("Special Boss", "Teleport to specific special boss", {"Granny", "Executioner", "Sailord", "Kai Guy", "Big Fish","The Skeleton", "The Patris", "Prism Troll", "Old Fart", "N"}, function(SelectedLocation)
    if SelectedLocation == "Granny" then
-       TPTO.CFrame = CFrame.new(1359, 31, -3455)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1359, 31, -3455)
    elseif SelectedLocation == "Executioner" then
-       TPTO.CFrame = CFrame.new(1008, 548, 635)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1008, 548, 635)
    elseif SelectedLocation == "Sailord" then
-       TPTO.CFrame = CFrame.new(1905, -11, -1384)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1905, -11, -1384)
    elseif SelectedLocation == "Kai Guy" then
-       TPTO.CFrame = CFrame.new(1716, 186, 219)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1716, 186, 219)
    elseif SelectedLocation == "Big Fish" then
-       TPTO.CFrame = CFrame.new(-761, 43, -3350)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-761, 43, -3350)
    elseif SelectedLocation == "The Skeleton" then
-       TPTO.CFrame = CFrame.new(-190, -27, -4362)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-190, -27, -4362)
    elseif SelectedLocation == "The Patris" then
-       TPTO.CFrame = CFrame.new(-3286, -19, -4534)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-3286, -19, -4534)
    elseif SelectedLocation == "Prism Troll" then
-       TPTO.CFrame = CFrame.new(746, -256, 17)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(746, -256, 17)
    elseif SelectedLocation == "Old Fart" then
-       TPTO.CFrame = CFrame.new(7487, -460, 1006)
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(7487, -460, 1006)
    elseif SelectedLocation == "N" then
-       TPTO.CFrame = CFrame.new(94, 42, -3741)  
+       TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(94, 42, -3741)  
    end
 end)
 
