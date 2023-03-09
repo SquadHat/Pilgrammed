@@ -397,35 +397,35 @@ end)
 
 Teleport:NewDropdown("Island", "Teleport to specific islands", {"Big Iron", "Blackened Island", "Bear Island", "Dark Tower Island", "Patchland Grove", "LOFI Island", "Vampire Island", "Mountain Basin", "Field", "Labyrinth", "Polar Bear Island", "Backdoor Island", "Patris Island", "Enchanted Island", "Eggroost Island"}, function(SelectedLocation)
     if SelectedLocation == "Big Iron" then
-       TPTO.CFrame = CFrame.new(2382, -22, -3319)
+        TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(2379, -22, -3320)
    elseif SelectedLocation == "Blackened Island" then
-       TPTO.CFrame = CFrame.new(-52, -11, -4458)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-52, -11, -4458)
    elseif SelectedLocation == "Bear Island" then
-       TPTO.CFrame = CFrame.new(-1463, 69, -130)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-1463, 69, -130)
    elseif SelectedLocation == "Dark Tower Island" then
-       TPTO.CFrame = CFrame.new(889, -5, -5835)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(889, -5, -5835)
    elseif SelectedLocation == "Patchland Grove" then
-       TPTO.CFrame = CFrame.new(-2312, 1, 1044)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-2312, 1, 1044)
    elseif SelectedLocation == "LOFI Island" then
-       TPTO.CFrame = CFrame.new(3398, -293, -1502)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(3398, -293, -1502)
    elseif SelectedLocation == "Vampire Island" then
-       TPTO.CFrame = CFrame.new(2795, -22, -2106)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(2795, -22, -2106)
    elseif SelectedLocation == "Mountain Basin" then
-       TPTO.CFrame = CFrame.new(1404, -22, 988)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(1404, -22, 988)
    elseif SelectedLocation == "Field" then
-       TPTO.CFrame = CFrame.new(7487, -460, 1006)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(7487, -460, 1006)
    elseif SelectedLocation == "Labyrinth" then
-       TPTO.CFrame = CFrame.new(-147, -17, 2671)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-147, -17, 2671)
    elseif SelectedLocation == "Polar Bear Island" then
-       TPTO.CFrame = CFrame.new(550, -21, 1617)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(550, -21, 1617)
    elseif SelectedLocation == "Backdoor Island" then
-       TPTO.CFrame = CFrame.new(-1973, -21, -5007)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-1973, -21, -5007)
    elseif SelectedLocation == "Patris Island" then
-       TPTO.CFrame = CFrame.new(-3251, -22, -4615)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-3251, -22, -4615)
    elseif SelectedLocation == "Enchanted Island" then
-       TPTO.CFrame = CFrame.new(-824, -2, 1735)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-824, -2, 1735)
    elseif SelectedLocation == "Eggroost Island" then
-       TPTO.CFrame = CFrame.new(-2070, 57, -3242)
+    TPTO.Character.HumanoidRootPart.CFrame = CFrame.new(-2070, 57, -3242)
    end
 end)
 
