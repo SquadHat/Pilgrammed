@@ -61,7 +61,7 @@ game:GetService("ReplicatedStorage").Remotes.Bank:InvokeServer(false, 0.5)
 end)
 
 Bank:NewKeybind("Bank", "Open Bank Anywhere", Enum.KeyCode.K, function()
-game:GetService("Players").shakemyhand1010.PlayerGui.ScreenGui.Bank.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Bank.Visible = true
 end)
 
 --[[ Misc ]]--
