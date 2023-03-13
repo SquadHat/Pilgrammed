@@ -359,7 +359,7 @@ fireproximityprompt(sanssprompt)
 end)
 
 wtf:NewButton("Drake The Skeleton", "Ah, the skeleton", function()
-local drakeprompt = npcsr.Drake.HumanoidRootPart.Krabs.DialogClick
+local drakeprompt = npcsr.Drake.HumanoidRootPart.DialogClick
 fireproximityprompt(drakeprompt)
 end)
 
