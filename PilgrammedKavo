@@ -69,7 +69,7 @@ end)
 
 --[[ Misc ]]--
 
-Loadout:NewKeybind("Cabinet", "Open Cabinet Anywhere!", Enum.KeyCode.X, function(state)
+Loadout:NewKeybind("Cabinet", "Open Cabinet Anywhere!", Enum.KeyCode.X, function()
 local cabinetprompt = game:GetService("Workspace").Map.PrairieVillage.Cabinet:GetChildren()[2].ProximityPrompt
 fireproximityprompt(cabinetprompt)
 end)
