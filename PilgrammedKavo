@@ -681,7 +681,9 @@ Gesm:FireServer("Explosive Gem")
 end)
 
 --[[ Character Editor ]]--
-
+local skinred = Color3.fromRGB(90, 0, 0)
+local hairred = Color3.fromRGB(70, 0, 0)
+local accessoryred = Color3.fromRGB(70, 0, 0)
 local cyan = Color3.fromRGB(120,255,255)
 local bluehair = Color3.fromRGB(140,255,255)
 local blueskin = Color3.fromRGB(10,255,255)
@@ -695,10 +697,6 @@ local equiphelmet = game:GetService("Players").LocalPlayer.Helmets
 local equipaccessory = game:GetService("Players").LocalPlayer.Accessories
 Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black"}, function(chosenavatar)
  if chosenavatar == "Demon" then
-local skinred = Color3.fromRGB(90, 0, 0)
-local hairred = Color3.fromRGB(70, 0, 0)
-local accessoryred = Color3.fromRGB(70, 0, 0)
-
 if equiparmor:FindFirstChild("Chaos Cultist") then
 armor:FireServer(1,equiparmor:FindFirstChild("Chaos Cultist"),true)
 end
@@ -718,16 +716,16 @@ Races:FireServer("Reaper")
 Races:FireServer("Vampire")
 Races:FireServer("Imp")
    elseif chosenavatar == "Ice" then
-if equipaccessory:FindFirstChild("Brilliant Cape") then
-armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),true)
-end
-wait(0.75)
 if equiparmor:FindFirstChild("Butler") then
 armor:FireServer(1,equiparmor:FindFirstChild("Butler"),true)
 end
 wait(0.75)
 if equiphelmet:FindFirstChild("Cowboy Hat") then
 armor:FireServer(0,equiphelmet:FindFirstChild("Cowboy Hat"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Brilliant Cape") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),true)
 end
 dye:FireServer(2, cyan)
 hair:FireServer(3, blueskin)
@@ -745,7 +743,7 @@ if equiphelmet:FindFirstChild("Sandpod Crown") then
 armor:FireServer(0,equiphelmet:FindFirstChild("Sandpod Crown"),true)
 end
 wait(0.75)
-armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),false)
+armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),true)
 dye:FireServer(2, black)
 dye:FireServer(0, black)
 hair:FireServer(1, black)
