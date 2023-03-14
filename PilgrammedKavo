@@ -8,6 +8,7 @@ local TP = Window:NewTab("Teleport")
 local Potion = Window:NewTab("Potion")
 local Gemmer = Window:NewTab("Gem")
 local Meteor = Window:NewTab("Meteor")
+local Editor = Window:NewTab('Character Editor')
 local Settings = Window:NewTab("Settings")
 
 --[[ Section ]]--
@@ -26,6 +27,7 @@ local Boss = TP:NewSection("Boss")
 local Poton = Potion:NewSection("Potion Recipes")
 local Remo = Gemmer:NewSection("Remove Gem")
 local Gemo = Gemmer:NewSection("Install Gem")
+local Editz = Editor:NewSection('Character Changer')
 local Settings = Settings:NewSection("Settings")
 
 --[[ Remotes ]]--
@@ -61,12 +63,13 @@ game:GetService("ReplicatedStorage").Remotes.Bank:InvokeServer(false, 0.5)
 end)
 
 Bank:NewKeybind("Bank", "Open Bank Anywhere", Enum.KeyCode.K, function()
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Bank.Visible = true
+local frame = game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Bank
+frame.Visible = not frame.Visible
 end)
 
 --[[ Misc ]]--
 
-Loadout:NewKeybind("Cabinet", "Open Cabinet Anywhere!", Enum.KeyCode.J, function()
+Loadout:NewKeybind("Cabinet", "Open Cabinet Anywhere!", Enum.KeyCode.X, function(state)
 local cabinetprompt = game:GetService("Workspace").Map.PrairieVillage.Cabinet:GetChildren()[2].ProximityPrompt
 fireproximityprompt(cabinetprompt)
 end)
@@ -79,7 +82,7 @@ end)
 Loadout:NewKeybind("Warp", "Use Mirror", Enum.KeyCode.Y, function()
 game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.Visible = true
 game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Disabled = true
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Enabled = true
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Enable = true
 end)
 
 Loadout:NewButton("Trigger Cultists", "open N door to trigger cultists", function()
@@ -675,6 +678,80 @@ end)
 
 Gemo:NewButton("Explosive Gem", "Install Explosive Gem on Holding Weapon", function()
 Gesm:FireServer("Explosive Gem")
+end)
+
+--[[ Character Editor ]]--
+
+local cyan = Color3.fromRGB(120,255,255)
+local bluehair = Color3.fromRGB(140,255,255)
+local blueskin = Color3.fromRGB(10,255,255)
+local black = Color3.fromRGB(0,0,0)
+local dye = game:GetService("ReplicatedStorage").Remotes.Dye
+local armor = game:GetService("ReplicatedStorage").Remotes.Armor
+local helmet = game:GetService("Players").LocalPlayer.Helmets
+local hair = game:GetService("ReplicatedStorage").Remotes.Hair
+local equiparmor = game:GetService("Players").LocalPlayer.Armors
+local equiphelmet = game:GetService("Players").LocalPlayer.Helmets
+local equipaccessory = game:GetService("Players").LocalPlayer.Accessories
+Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black"}, function(chosenavatar)
+ if chosenavatar == "Demon" then
+local skinred = Color3.fromRGB(90, 0, 0)
+local hairred = Color3.fromRGB(70, 0, 0)
+local accessoryred = Color3.fromRGB(70, 0, 0)
+
+if equiparmor:FindFirstChild("Chaos Cultist") then
+armor:FireServer(1,equiparmor:FindFirstChild("Chaos Cultist"),true)
+end
+wait(0.75)
+if equiphelmet:FindFirstChild("Scarecrow Hat") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Scarecrow Hat"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Thief King Cloak") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Thief King Cloak"),true)
+end
+dye:FireServer(2, accessoryred)
+hair:FireServer(3, skinred)
+hair:FireServer(1, hairred)
+hair:FireServer(11, hairred)
+Races:FireServer("Reaper")
+Races:FireServer("Vampire")
+Races:FireServer("Imp")
+   elseif chosenavatar == "Ice" then
+if equipaccessory:FindFirstChild("Brilliant Cape") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),true)
+end
+wait(0.75)
+if equiparmor:FindFirstChild("Butler") then
+armor:FireServer(1,equiparmor:FindFirstChild("Butler"),true)
+end
+wait(0.75)
+if equiphelmet:FindFirstChild("Cowboy Hat") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Cowboy Hat"),true)
+end
+dye:FireServer(2, cyan)
+hair:FireServer(3, blueskin)
+hair:FireServer(1, bluehair)
+hair:FireServer(11, bluehair)
+Races:FireServer("Reaper")
+Races:FireServer("Vampire")
+Races:FireServer("Ice")
+   elseif chosenavatar == "Black" then
+if equiparmor:FindFirstChild("Suit") then
+armor:FireServer(1,equiparmor:FindFirstChild("Suit"),true)
+end
+wait(0.75)
+if equiphelmet:FindFirstChild("Sandpod Crown") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Sandpod Crown"),true)
+end
+wait(0.75)
+armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),false)
+dye:FireServer(2, black)
+dye:FireServer(0, black)
+hair:FireServer(1, black)
+hair:FireServer(11, black)
+hair:FireServer(3, black)
+   end
 end)
 
 --[[ Settings ]]--
