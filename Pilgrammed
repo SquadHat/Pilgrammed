@@ -23,6 +23,7 @@ local Tabs = {
 local LeftGroupBox = Tabs.Main:AddLeftGroupbox('Bank 💵')
 local TabShop = Tabs.Shop:AddLeftTabbox()
 local TabShop2 = Tabs.Shop:AddRightTabbox()
+local TabShop3 = Tabs.Shop:AddRightTabbox()
 local TabTP = Tabs.Teleport:AddLeftTabbox()
 local TabPo = Tabs.Potion:AddLeftTabbox()
 local TabGem = Tabs.Gem:AddLeftTabbox()
@@ -33,6 +34,7 @@ local TabS = TabShop:AddTab('Shop')
 local TabS2 = TabShop:AddTab('Quest')
 local TabS3 = TabShop2:AddTab('Ingredients')
 local TabS4 = TabShop2:AddTab('Mela')
+local TabS5 = TabShop3:AddTab('Character Editor')
 local Potion1 = TabPo:AddTab('Potion Recipes')
 local Remo = TabGem:AddTab('Gem')
 local TabIsland = TabTP:AddTab('Island')
@@ -43,6 +45,42 @@ local npcsr = game:GetService("Workspace").NPCs
 local TPTO = game.Players.LocalPlayer
 --[[ Tab 1 ]]--
 
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+if key == "j" then
+local cabinetprompt = game:GetService("Workspace").Map.PrairieVillage.Cabinet:GetChildren()[2].ProximityPrompt
+fireproximityprompt(cabinetprompt)
+end
+end)
+
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+if key == "c" then
+local cauldronprompt = game:GetService("Workspace").Map.Cauldron.Liquid.ProximityPrompt
+fireproximityprompt(cauldronprompt)
+end
+end)
+
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+if key == "y" then
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Disabled = true
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Enabled = true
+end
+end)
+
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+if key == "k" then
+game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Bank.Visible = true
+end
+end)
+
 Tab1:AddLabel('Open Cabinet'):AddKeyPicker('Cabinet', {
     Default = 'J',
     SyncToggleState = false,
@@ -50,13 +88,7 @@ Tab1:AddLabel('Open Cabinet'):AddKeyPicker('Cabinet', {
 	NoUI = true,
 })
 Options.Cabinet:OnClick(function()
-local state = Options.Cabinet:GetState()
-if state then
-local cabinetprompt = game:GetService("Workspace").Map.PrairieVillage.Cabinet:GetChildren()[2].ProximityPrompt
-fireproximityprompt(cabinetprompt)
-else
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Equipment.Visible = false
-end end)
+end)
 
 task.spawn(function()
 while wait() do
@@ -72,13 +104,7 @@ Tab1:AddLabel('Open Cauldron'):AddKeyPicker('Cauldron', {
 	NoUI = true,
 })
 Options.Cauldron:OnClick(function()
-local state = Options.Cauldron:GetState()
-if state then
-local cauldronprompt = game:GetService("Workspace").Map.Cauldron.Liquid.ProximityPrompt
-fireproximityprompt(cauldronprompt)
-else
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Cauldron.Visible = false
-end end)
+end)
 
 task.spawn(function()
     while wait() do
@@ -94,21 +120,10 @@ Tab1:AddLabel('Wrap'):AddKeyPicker('Wraps', {
 	NoUI = true,
 })
 Options.Wraps:OnClick(function()
-local state = Options.Wraps:GetState()
-if state then
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.Visible = true
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Disabled = true
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.LocalScript.Enabled = true
-else
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Warp.Visible = false
-end end)
+end)
 
 task.spawn(function()
-    while true do
-        wait(3)
-        local state = Options.Wraps:GetState()
-        if state then
-        end
+    while wait() do
         if Library.Unloaded then break end
     end
 end)
@@ -141,19 +156,10 @@ LeftGroupBox:AddLabel('Open Bank'):AddKeyPicker('Bank', {
 	NoUI = true,
 })
 Options.Bank:OnClick(function()
-local state = Options.Bank:GetState()
-if state then
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Bank.Visible = true
-else
-game:GetService("Players").LocalPlayer.PlayerGui.ScreenGui.Bank.Visible = false
-end end)
+end)
 
 task.spawn(function()
-    while true do
-        wait()
-        local state = Options.Bank:GetState()
-        if state then
-        end
+    while wait() do
         if Library.Unloaded then break end
     end
 end)
@@ -205,6 +211,11 @@ Gesm:FireServer("Explosive Gem")
 end)
 
 --[[ Box1 ]]--
+
+local Button1 = Box1:AddButton('Multi Tool', function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Aidez/pilgrammed/main/multi_tool"))()
+end)
+Button1:AddTooltip('Multi Tool By Aidez!')
 
 local Button1 = Box1:AddButton('Trigger Cultist', function()
 fireclickdetector(game:GetService("Workspace").Map.Hideout.Door.Door.ClickDetector)
@@ -751,6 +762,17 @@ fireproximityprompt(Hoboprompt)
 local oddprompt = npcsr["Odd Sculpture"].Root.DialogClick
 fireproximityprompt(oddprompt)
 end end)
+
+TabS5:AddDivider()
+TabS5:AddLabel('Character Editor')
+local EditButton = TabS5:AddButton('Capillus', function()
+local Capillusprompt = npcsr.Capillus.HumanoidRootPart.DialogClick
+fireproximityprompt(Capillusprompt)
+end)
+local EditButton2 = EditButton:AddButton('Dyler', function()
+local Dylerprompt = npcsr.Dyler.HumanoidRootPart.DialogClick
+fireproximityprompt(Dylerprompt)
+end)
 
 --[[ Quest ]]--
 
