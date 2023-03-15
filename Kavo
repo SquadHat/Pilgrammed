@@ -27,7 +27,7 @@ local Boss = TP:NewSection("Boss")
 local Poton = Potion:NewSection("Potion Recipes")
 local Remo = Gemmer:NewSection("Remove Gem")
 local Gemo = Gemmer:NewSection("Install Gem")
-local Editz = Editor:NewSection('Character Changer')
+local Editz = Editor:NewSection("Character Changer (DONT TOUCH THIS)")
 local Settings = Settings:NewSection("Settings")
 
 --[[ Remotes ]]--
@@ -695,6 +695,7 @@ local hair = game:GetService("ReplicatedStorage").Remotes.Hair
 local equiparmor = game:GetService("Players").LocalPlayer.Armors
 local equiphelmet = game:GetService("Players").LocalPlayer.Helmets
 local equipaccessory = game:GetService("Players").LocalPlayer.Accessories
+
 Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black"}, function(chosenavatar)
  if chosenavatar == "Demon" then
 if equiparmor:FindFirstChild("Chaos Cultist") then
@@ -750,6 +751,13 @@ hair:FireServer(1, black)
 hair:FireServer(11, black)
 hair:FireServer(3, black)
    end
+end)
+Editz:NewLabel("Mutli Tool")
+Editz:NewButton("Mutli Tool", "(Original) Multi Tool Made By Aidez!", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Aidez/pilgrammed/main/multi_tool"))()
+end)
+Editz:NewButton("Mutli Tool (Edited)", "This version is edited the original one is made by aidez", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SquadHat/Pilgrammed/main/Multi"))()
 end)
 
 --[[ Settings ]]--
