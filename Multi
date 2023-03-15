@@ -120,11 +120,6 @@ for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren
 		child:SetAttribute("Type", "Tanto")
     end
 end
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Tanto" then
-		child:SetAttribute("Type", "Tanto")
-    end
-end
 -- Tanto
 for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
     if child.Name == "Nagakiba" then
@@ -152,11 +147,6 @@ for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren
     end
 end
 -- Normal Claw
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Tanto" then
-		child:SetAttribute("Type", "Tanto")
-    end
-end
 for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
     if child.Name == "Tanto" then
 		child:SetAttribute("Type", "Tanto")
