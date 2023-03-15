@@ -3,6 +3,36 @@ Multi Tool By Aidez. Reminder I didn't made this script, all credits goes to aid
 Thread: https://v3rmillion.net/showthread.php?tid=1202659 go like and vouch the thread please
 ]]--
 
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Buster Sword" then
+        child:SetAttribute("Type", "Buster")
+    end
+end
+-- Buster Sword
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Champion's Gladius" then
+		child:SetAttribute("Type", "Champion")
+    end
+end
+-- Champion's Gladius
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Normal Claw" then
+		child:SetAttribute("Type", "Normal")
+    end
+end
+-- Normal Claw
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Tanto" then
+		child:SetAttribute("Type", "Tanto")
+    end
+end
+-- Tanto
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Nagakiba" then
+		child:SetAttribute("Type", "Nagakiba")
+    end
+end
+-- Nagakiba
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
 if Player == nil then
@@ -95,70 +125,6 @@ ContextActionService:BindActionAtPriority("Toggle",function(Action, State, Input
     end
 end,false,Enum.ContextActionPriority.High.Value,Enum.KeyCode.H,Enum.KeyCode.T)
 ContextActionService:BindActionAtPriority("Multitool",MultitoolConnection,false,Enum.ContextActionPriority.High.Value,Enum.UserInputType.MouseButton1)
-
-game.Players.LocalPlayer.CharacterAdded:connect(function()
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Buster Sword" then
-        child:SetAttribute("Type", "Buster")
-    end
-end
--- Buster Sword
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Champion's Gladius" then
-		child:SetAttribute("Type", "Champion")
-    end
-end
--- Champion's Gladius
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Normal Claw" then
-		child:SetAttribute("Type", "Normal")
-    end
-end
--- Normal Claw
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Tanto" then
-		child:SetAttribute("Type", "Tanto")
-    end
-end
--- Tanto
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Nagakiba" then
-		child:SetAttribute("Type", "Nagakiba")
-    end
-end
--- Nagakiba
-end)
-
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Buster Sword" then
-        child:SetAttribute("Type", "Buster")
-    end
-end
--- Buster Sword
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Champion's Gladius" then
-		child:SetAttribute("Type", "Champion")
-    end
-end
--- Champion's Gladius
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Normal Claw" then
-		child:SetAttribute("Type", "Normal")
-    end
-end
--- Normal Claw
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Tanto" then
-		child:SetAttribute("Type", "Tanto")
-    end
-end
--- Tanto
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
-    if child.Name == "Nagakiba" then
-		child:SetAttribute("Type", "Nagakiba")
-    end
-end
--- Nagakiba
 
 game.StarterGui:SetCore("SendNotification", {
     Title = "Injected!";
