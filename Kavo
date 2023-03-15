@@ -1055,13 +1055,6 @@ game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
 end end)
 --[[ Settings ]]--
 
-Editz:NewButton("Click Me", "", function()
-game.StarterGui:SetCore("SendNotification", {
-Title = "Topic";
-Text = "Pilgrammed - QUM#9966, Multi Tool - Aidez";
-Duration = 7;
-})
-end)
 Settings:NewKeybind("Bind UI", "", Enum.KeyCode.RightControl, function()
 	Library:ToggleUI()
 end)
