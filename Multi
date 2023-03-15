@@ -134,6 +134,11 @@ end
 -- Nagakiba
 end)
 
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Buster Sword" then
+        child:SetAttribute("Type", "Buster")
+    end
+end
 -- Buster Sword
 for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
     if child.Name == "Champion's Gladius" then
