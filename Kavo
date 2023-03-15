@@ -1052,7 +1052,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
-end
+end end)
 --[[ Settings ]]--
 
 Editz:NewButton("Click Me", "", function()
