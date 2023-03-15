@@ -759,9 +759,309 @@ end)
 Editz:NewButton("Mutli Tool (Edited)", "This version is edited the original one is made by aidez", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SquadHat/Pilgrammed/main/Multi"))()
 end)
+Editz:NewLabel("Loadout (DO NOT TOUCH)")
+Editz:NewDropdown("Loadout", "", {"Normal Claw", "Frost Prism Lance", "Wicked Limb", "Six Shooters", "Death Cannon"}, function(op)
+    z = op
+end)
+Editz:NewButton("Load", "Load chosen loadut", function()
+    if z == "Normal Claw" then
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "Patchwork",
+            [2] = "Wonderful"
+        },
+        [2] = {
+            [1] = "Viking Helmet",
+            [2] = "Angry"
+        },
+        [3] = {
+            [1] = {
+                [1] = "Diamond Ring",
+                [2] = "Jagged"
+            },
+            [2] = {
+                [1] = "Mysterious Charm",
+                [2] = "Jagged"
+            },
+            [3] = {
+                [1] = "Rubber Band",
+                [2] = "Jagged"
+            },
+            [4] = {
+                [1] = "Unharmed Energy",
+                [2] = "Jagged"
+            },
+            [5] = {
+                [1] = "Combo Glove",
+                [2] = "Jagged"
+            }
+        },
+        [4] = {
+            [1] = {
+                [1] = "Rude",
+                [2] = 0
+            },
+            [2] = {
+                [1] = "Delicate",
+                [2] = 1
+            },
+            [3] = {
+                [1] = "Bloodthirst",
+                [2] = 0
+            },
+            [4] = {
+                [1] = "Rampage",
+                [2] = 0
+            },
+            [5] = {
+                [1] = "Juggernaut",
+                [2] = 1
+            }
+        },
+        [5] = "Normal Claw"
+    }
+}
 
+game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
+end
+    if z == "Frost Prism Lance" then
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "Patchwork",
+            [2] = "Wonderful"
+        },
+        [2] = {
+            [1] = "Ice Crown",
+            [2] = "Spiky"
+        },
+        [3] = {
+            [1] = {
+                [1] = "Shiver Stone",
+                [2] = "Jagged"
+            },
+            [2] = {
+                [1] = "Frost Cone",
+                [2] = "Jagged"
+            },
+            [3] = {
+                [1] = "Diamond Ring",
+                [2] = "Jagged"
+            },
+            [4] = {
+                [1] = "Unharmed Energy",
+                [2] = "Jagged"
+            },
+            [5] = {
+                [1] = "Combo Glove",
+                [2] = "Jagged"
+            }
+        },
+        [4] = {
+            [1] = {
+                [1] = "Juggernaut",
+                [2] = 1
+            },
+            [2] = {
+                [1] = "Rude",
+                [2] = 1
+            },
+            [3] = {
+                [1] = "Perception",
+                [2] = 0
+            },
+            [4] = {
+                [1] = "Rampage",
+                [2] = 0
+            },
+            [5] = {
+                [1] = "Bloodthirst",
+                [2] = 0
+            }
+        },
+        [6] = "Frost Prism Lance"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
+end
+    if z == "Wicked Limb" then
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "Diver",
+            [2] = "Smart"
+        },
+        [2] = {
+            [1] = "Mushroom Cap",
+            [2] = "Wonderful"
+        },
+        [3] = {
+            [1] = {
+                [1] = "Diamond Ring",
+                [2] = "Jagged"
+            },
+            [2] = {
+                [1] = "Unharmed Energy",
+                [2] = "Bright"
+            },
+            [3] = {
+                [1] = "Nerd Glasses",
+                [2] = "Bright"
+            },
+            [4] = {
+                [1] = "Mana Dissonance",
+                [2] = "Bright"
+            },
+            [5] = {
+                [1] = "Mysterious Charm",
+                [2] = "Bright"
+            }
+        },
+        [4] = {
+            [1] = {
+                [1] = "Perception",
+                [2] = 1
+            },
+            [2] = {
+                [1] = "Ineffable",
+                [2] = 1
+            },
+            [3] = {
+                [1] = "Wizardry",
+                [2] = 1
+            },
+            [4] = {
+                [1] = "Athlete",
+                [2] = 0
+            }
+        },
+        [5] = "Wicked Limb"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
+end
+    if z == "Six Shooters" then
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "Patchwork",
+            [2] = "Wonderful"
+        },
+        [2] = {
+            [1] = "Cowboy Hat",
+            [2] = "Fragile"
+        },
+        [3] = {
+            [1] = {
+                [1] = "Unharmed Energy",
+                [2] = "Jagged"
+            },
+            [2] = {
+                [1] = "Pistol Pop Pellets",
+                [2] = "Deft"
+            },
+            [3] = {
+                [1] = "Outlaw Glasses",
+                [2] = "Deft"
+            },
+            [4] = {
+                [1] = "Ranger Emblem",
+                [2] = "Deft"
+            },
+            [5] = {
+                [1] = "Sharktooth Necklace",
+                [2] = "Deft"
+            }
+        },
+        [4] = {
+            [1] = {
+                [1] = "Juggernaut",
+                [2] = 1
+            },
+            [2] = {
+                [1] = "Chicanery",
+                [2] = 1
+            },
+            [3] = {
+                [1] = "Delicate",
+                [2] = 1
+            }
+        },
+        [5] = "Six Shooters 2"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
+end
+    if z == "Death Cannon" then
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "Diver",
+            [2] = "Wonderful"
+        },
+        [2] = {
+            [1] = "Mushroom Cap",
+            [2] = "Wonderful"
+        },
+        [3] = {
+            [1] = {
+                [1] = "Cursed Doll",
+                [2] = "Bright"
+            },
+            [2] = {
+                [1] = "Sniper Scope",
+                [2] = "Bright"
+            },
+            [3] = {
+                [1] = "Ranger Emblem",
+                [2] = "Brisk"
+            },
+            [4] = {
+                [1] = "Mana Bullets",
+                [2] = "Bright"
+            },
+            [5] = {
+                [1] = "Nerd Glasses",
+                [2] = "Deft"
+            }
+        },
+        [4] = {
+            [1] = {
+                [1] = "Sharpshooter",
+                [2] = 1
+            },
+            [2] = {
+                [1] = "Ineffable",
+                [2] = 1
+            },
+            [3] = {
+                [1] = "Juggernaut",
+                [2] = 1
+            },
+            [4] = {
+                [1] = "Wizardry",
+                [2] = 0
+            }
+        },
+        [5] = "Death Cannon"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
+end
 --[[ Settings ]]--
 
+Editz:NewButton("Click Me", "", function()
+game.StarterGui:SetCore("SendNotification", {
+Title = "Topic";
+Text = "Pilgrammed - QUM#9966, Multi Tool - Aidez";
+Duration = 7;
+})
+end)
 Settings:NewKeybind("Bind UI", "", Enum.KeyCode.RightControl, function()
 	Library:ToggleUI()
 end)
