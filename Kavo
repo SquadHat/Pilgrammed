@@ -759,6 +759,8 @@ end)
 Editz:NewButton("Mutli Tool (Edited)", "This version is edited the original one is made by aidez", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SquadHat/Pilgrammed/main/Multi"))()
 end)
+Editz:NewLabel("Press this if you die")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SquadHat/Pilgrammed/main/stackweapon"))()
 Editz:NewLabel("Loadout (DO NOT TOUCH)")
 Editz:NewDropdown("Loadout", "", {"Normal Claw", "Frost Prism Lance", "Wicked Limb", "Six Shooters", "Death Cannon"}, function(op)
     z = op
