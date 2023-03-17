@@ -761,6 +761,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/SquadHat/Pilgrammed/m
 end)
 Editz:NewLabel("Press this if you die")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SquadHat/Pilgrammed/main/stackweapon"))()
+Editz:NewButton("Attribute", "", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SquadHat/Pilgrammed/main/stackweapon"))()
+end)
 Editz:NewLabel("Loadout (DO NOT TOUCH)")
 Editz:NewDropdown("Loadout", "", {"Normal Claw", "Frost Prism Lance", "Wicked Limb", "Six Shooters", "Death Cannon"}, function(op)
     z = op
