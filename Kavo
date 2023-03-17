@@ -696,8 +696,8 @@ local equiparmor = game:GetService("Players").LocalPlayer.Armors
 local equiphelmet = game:GetService("Players").LocalPlayer.Helmets
 local equipaccessory = game:GetService("Players").LocalPlayer.Accessories
 
-Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black"}, function(chosenavatar)
- if chosenavatar == "Demon" then
+Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black","Pink"}, function(chosenavatar)
+ if chosenavatar == "Demon" then -- Imp
 if equiparmor:FindFirstChild("Chaos Cultist") then
 armor:FireServer(1,equiparmor:FindFirstChild("Chaos Cultist"),true)
 end
@@ -716,7 +716,7 @@ hair:FireServer(11, hairred)
 Races:FireServer("Reaper")
 Races:FireServer("Vampire")
 Races:FireServer("Imp")
-   elseif chosenavatar == "Ice" then
+   elseif chosenavatar == "Ice" then -- Ice
 if equiparmor:FindFirstChild("Butler") then
 armor:FireServer(1,equiparmor:FindFirstChild("Butler"),true)
 end
@@ -735,7 +735,9 @@ hair:FireServer(11, bluehair)
 Races:FireServer("Reaper")
 Races:FireServer("Vampire")
 Races:FireServer("Ice")
-   elseif chosenavatar == "Black" then
+   elseif chosenavatar == "Black" then -- Black
+local black = Color3.fromRGB(0,0,0)
+local wraps = Color3.fromRGB(255,195,255)
 if equiparmor:FindFirstChild("Suit") then
 armor:FireServer(1,equiparmor:FindFirstChild("Suit"),true)
 end
@@ -744,12 +746,49 @@ if equiphelmet:FindFirstChild("Sandpod Crown") then
 armor:FireServer(0,equiphelmet:FindFirstChild("Sandpod Crown"),true)
 end
 wait(0.75)
+if equipaccessory:FindFirstChild("Brilliant Cape") then
 armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),true)
+end
+wait(0.75)
+if equiphelmet:FindFirstChild("Mummy Wraps") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Mummy Wraps"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Kai Wraps") then
+armor:FireServer(3,equiphelmet:FindFirstChild("Kai Wraps"),true)
+end
+dye:FireServer(3, wraps)
+dye:FireServer(0, wraps)
 dye:FireServer(2, black)
 dye:FireServer(0, black)
 hair:FireServer(1, black)
 hair:FireServer(11, black)
 hair:FireServer(3, black)
+   elseif chosenavatar == "Pink" then -- Pink
+local pink = Color3.fromRGB(255, 195 , 255)
+local blackskin = Color3.fromRGB(0, 0, 0)
+if equiparmor:FindFirstChild("Martial Kai Gi") then
+armor:FireServer(1,equiparmor:FindFirstChild("Martial Kai Gi"),true)
+end
+wait(0.85)
+if equiphelmet:FindFirstChild("Mummy Wraps") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Mummy Wraps"),true)
+end
+wait(0.85)
+if equipaccessory:FindFirstChild("Kai Wraps") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
+end
+wait(0.85)
+if equipaccessory:FindFirstChild("Brilliant Cape") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),true)
+end
+dye:FireServer(0, pink)
+dye:FireServer(3, pink)
+dye:FireServer(1, pink)
+dye:FireServer(2, pink)
+hair:FireServer(1, pink)
+hair:FireServer(11, pink)
+hair:FireServer(3, blackskin)
    end
 end)
 Editz:NewLabel("Mutli Tool")
