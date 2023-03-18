@@ -788,6 +788,36 @@ dye:FireServer(2, pink)
 hair:FireServer(1, pink)
 hair:FireServer(11, pink)
 hair:FireServer(3, blackskin)
+elseif chosenavatar == "White" then -- White
+local white = Color3.fromRGB(255,255,255)
+local whitehat = Color3.fromRGB(254,255,255)
+
+if equipaccessory:FindFirstChild("Thief Earrings") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Thief Earrings"),true)
+end
+wait(0.75)
+if equiphelmet:FindFirstChild("Pirate Hat") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Pirate Hat"),true)
+end
+wait(0.75)
+if equiparmor:FindFirstChild("Snow Wanderer") then
+armor:FireServer(1,equiparmor:FindFirstChild("Snow Wanderer"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Brilliant Cape") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Kai Wraps") then
+armor:FireServer(0,equipaccessory:FindFirstChild("Kai Wraps"),true)
+end
+hair:FireServer(3, white)
+hair:FireServer(1, white)
+hair:FireServer(11, white)
+dye:FireServer(2, white)
+dye:FireServer(3, white)
+dye:FireServer(4, white)
+dye:FireServer(0, whitehat)
    end
 end)
 Editz:NewLabel("Mutli Tool")
