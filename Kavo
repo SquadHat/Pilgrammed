@@ -696,7 +696,7 @@ local equiparmor = game:GetService("Players").LocalPlayer.Armors
 local equiphelmet = game:GetService("Players").LocalPlayer.Helmets
 local equipaccessory = game:GetService("Players").LocalPlayer.Accessories
 
-Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black","Pink"}, function(chosenavatar)
+Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black","Pink","White"}, function(chosenavatar)
  if chosenavatar == "Demon" then -- Imp
 if equiparmor:FindFirstChild("Chaos Cultist") then
 armor:FireServer(1,equiparmor:FindFirstChild("Chaos Cultist"),true)
@@ -788,7 +788,7 @@ dye:FireServer(2, pink)
 hair:FireServer(1, pink)
 hair:FireServer(11, pink)
 hair:FireServer(3, blackskin)
-elseif chosenavatar == "White" then -- White
+   elseif chosenavatar == "White" then -- White
 local white = Color3.fromRGB(255,255,255)
 local whitehat = Color3.fromRGB(254,255,255)
 
