@@ -755,7 +755,7 @@ armor:FireServer(0,equiphelmet:FindFirstChild("Mummy Wraps"),true)
 end
 wait(0.75)
 if equipaccessory:FindFirstChild("Kai Wraps") then
-armor:FireServer(3,equiphelmet:FindFirstChild("Kai Wraps"),true)
+armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
 end
 dye:FireServer(3, wraps)
 dye:FireServer(0, wraps)
