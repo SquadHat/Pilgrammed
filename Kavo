@@ -737,7 +737,7 @@ Races:FireServer("Vampire")
 Races:FireServer("Ice")
    elseif chosenavatar == "Black" then -- Black
 local black = Color3.fromRGB(0,0,0)
-local wraps = Color3.fromRGB(255,195,255)
+local wraps = Color3.fromRGB(254,255,255)
 if equiparmor:FindFirstChild("Suit") then
 armor:FireServer(1,equiparmor:FindFirstChild("Suit"),true)
 end
@@ -760,7 +760,6 @@ end
 dye:FireServer(3, wraps)
 dye:FireServer(0, wraps)
 dye:FireServer(2, black)
-dye:FireServer(0, black)
 hair:FireServer(1, black)
 hair:FireServer(11, black)
 hair:FireServer(3, black)
