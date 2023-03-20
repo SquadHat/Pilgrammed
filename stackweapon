@@ -28,3 +28,21 @@ for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren
     end
 end
 -- Nagakiba
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Empyrean Maul" then
+		child:SetAttribute("Type", "Empyrean")
+    end
+end
+-- Empyrean Maul
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Megaton Maul" then
+		child:SetAttribute("Type", "Megaton Hammer")
+    end
+end
+-- Megaton Hammer
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Crude Club" then
+		child:SetAttribute("Type", "Crude Club")
+    end
+end
+-- Crude Club
