@@ -1511,7 +1511,7 @@ local args = {
             [2] = "Wonderful"
         },
         [2] = {
-            [1] = "Martial Headband",
+            [1] = "Sandpod Helmet",
             [2] = "Angry"
         },
         [3] = {
