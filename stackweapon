@@ -1,3 +1,5 @@
+game.Players.LocalPlayer.CharacterAdded:Connect(function()
+wait(2)
 for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
     if child.Name == "Buster Sword" then
         child:SetAttribute("Type", "Buster")
@@ -51,3 +53,5 @@ for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren
 		child:SetAttribute("Type", "Snowshatter")
     end
 end
+end)
+
