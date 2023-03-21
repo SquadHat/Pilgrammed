@@ -46,3 +46,8 @@ for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren
     end
 end
 -- Crude Club
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Snowshatter" then
+		child:SetAttribute("Type", "Snowshatter")
+    end
+end
