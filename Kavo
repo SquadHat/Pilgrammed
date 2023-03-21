@@ -710,6 +710,7 @@ if equipaccessory:FindFirstChild("Thief King Cloak") then
 armor:FireServer(3,equipaccessory:FindFirstChild("Thief King Cloak"),true)
 end
 dye:FireServer(2, accessoryred)
+dye:FireServer(3, accessoryred)
 hair:FireServer(3, skinred)
 hair:FireServer(1, hairred)
 hair:FireServer(11, hairred)
@@ -821,6 +822,33 @@ dye:FireServer(2, white)
 dye:FireServer(3, white)
 dye:FireServer(4, white)
 dye:FireServer(0, whitehat)
+   elseif chosenavatar == "Yellow" then -- Yellow
+local yellowhair = Color3.fromHex("#FFF646")
+local whiteskin = Color3.fromHex("#FFFFFF")
+local yellow = Color3.fromRGB(255,246,70)
+
+if equiphelmet:FindFirstChild("Night Cap") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Night Cap"),true)
+end
+wait(0.75)
+if equiparmor:FindFirstChild("Snow Wanderer") then
+armor:FireServer(1,equiparmor:FindFirstChild("Snow Wanderer"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Thief King Cloak") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Thief King Cloak"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Kai Wraps") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
+end
+hair:FireServer(3, whiteskin)
+hair:FireServer(1, yellowhair)
+hair:FireServer(11, yellowhair)
+dye:FireServer(2, yellow)
+dye:FireServer(3, yellow)
+dye:FireServer(0, yellow)
+dye:FireServer(1, yellow)
    end
 end)
 Editz:NewLabel("Mutli Tool")
