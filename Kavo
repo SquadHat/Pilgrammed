@@ -852,8 +852,8 @@ if equiphelmet:FindFirstChild("Straw Hat") then
 armor:FireServer(0,equiphelmet:FindFirstChild("Straw Hat"),true)
 end
 wait(0.75)
-if equiparmor:FindFirstChild("Kai Gi") then
-armor:FireServer(1,equiparmor:FindFirstChild("Kai Gi"),true)
+if equiparmor:FindFirstChild("Martial Kai Gi") then
+armor:FireServer(1,equiparmor:FindFirstChild("Martial Kai Gi"),true)
 end
 wait(0.75)
 if equipaccessory:FindFirstChild("Brilliant Cape") then
