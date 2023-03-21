@@ -696,7 +696,7 @@ local equiparmor = game:GetService("Players").LocalPlayer.Armors
 local equiphelmet = game:GetService("Players").LocalPlayer.Helmets
 local equipaccessory = game:GetService("Players").LocalPlayer.Accessories
 
-Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black","Pink","White"}, function(chosenavatar)
+Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black","Pink","White","Yellow","Knight"}, function(chosenavatar)
  if chosenavatar == "Demon" then -- Imp
 game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(10, "Ponytail")
 game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(0, "MangaHero")
