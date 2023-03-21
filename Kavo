@@ -1,12 +1,11 @@
-if game:GetService("Players").LocalPlayer:FindFirstChild("Character") == nil then
+if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("Title") ~= nil then
 game.StarterGui:SetCore("SendNotification", {
-Title = "LOADING";
-Text = "Enter a game to fully load";
+Title = "INSTRUCTION";
+Text = "Enter a game and execute script again";
 Icon = "rbxassetid://2541869220";
 Duration = 5;
 })
-end
-game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(Character)
+else
 --[[ Kavo UI ]]--
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("Pilgrammed", "Synapse")
@@ -1646,4 +1645,4 @@ end)
 Settings:NewKeybind("Bind UI", "", Enum.KeyCode.RightControl, function()
 	Library:ToggleUI()
 end)
-end)
+end
