@@ -48,10 +48,10 @@ end
 -- Crude Club
 for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
     if child.Name == "Snowshatter" then
-		child:SetAttribute("Type", "Snowshatter")
+	child:SetAttribute("Type", "Snowshatter")
     end
 end
--- Character
+--[[ Character ]]--
 game.Players.LocalPlayer.CharacterAdded:Connect(function()
 wait(2)
 for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
