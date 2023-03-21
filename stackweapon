@@ -1,3 +1,57 @@
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Buster Sword" then
+        child:SetAttribute("Type", "Buster")
+    end
+end
+-- Buster Sword
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Champion's Gladius" then
+		child:SetAttribute("Type", "Champion")
+    end
+end
+-- Champion's Gladius
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Normal Claw" then
+		child:SetAttribute("Type", "Normal")
+    end
+end
+-- Normal Claw
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Tanto" then
+		child:SetAttribute("Type", "Tanto")
+    end
+end
+-- Tanto
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Nagakiba" then
+		child:SetAttribute("Type", "Nagakiba")
+    end
+end
+-- Nagakiba
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Empyrean Maul" then
+		child:SetAttribute("Type", "Empyrean")
+    end
+end
+-- Empyrean Maul
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Megaton Maul" then
+		child:SetAttribute("Type", "Megaton Hammer")
+    end
+end
+-- Megaton Hammer
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Crude Club" then
+		child:SetAttribute("Type", "Crude Club")
+    end
+end
+-- Crude Club
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+    if child.Name == "Snowshatter" then
+		child:SetAttribute("Type", "Snowshatter")
+    end
+end
+-- Character
 game.Players.LocalPlayer.CharacterAdded:Connect(function()
 wait(2)
 for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
@@ -54,4 +108,3 @@ for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren
     end
 end
 end)
-
