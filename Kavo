@@ -704,7 +704,7 @@ local equiparmor = game:GetService("Players").LocalPlayer.Armors
 local equiphelmet = game:GetService("Players").LocalPlayer.Helmets
 local equipaccessory = game:GetService("Players").LocalPlayer.Accessories
 
-Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black","Pink","White","Yellow","Knight"}, function(chosenavatar)
+Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black","Pink","White","Yellow","Knight","Astolfo","Empyrean Knight"}, function(chosenavatar)
  if chosenavatar == "Demon" then -- Imp
 game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(10, "Ponytail")
 game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(0, "MangaHero")
@@ -897,6 +897,62 @@ dye:FireServer(0, helmetcolor)
 dye:FireServer(1, armorcolor)
 dye:FireServer(2, capecolor)
 dye:FireServer(3, capecolor)
+   elseif chosenavatar == "Astolfo" then -- Astolfo
+local astolhair = Color3.fromRGB(255, 175, 190)
+local astolarmor = Color3.fromRGB(0,0,0)
+local astolcape = Color3.fromRGB(255,255,255)
+
+
+if equiparmor:FindFirstChild("Mercenary") then
+armor:FireServer(1,equiparmor:FindFirstChild("Mercenary"),true)
+end
+wait(0.75)
+if equiphelmet:FindFirstChild("Familiar Hair") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Familiar Hair"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Thief King Cloak") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Thief King Cloak"),true)
+end
+if equipaccessory:FindFirstChild("Kai Wraps") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
+end
+hair:FireServer(3, astolcape)
+hair:FireServer(1, astolhair)
+hair:FireServer(11, astolhair)
+dye:FireServer(1, astolarmor)
+dye:FireServer(2, astolcape)
+dye:FireServer(3, astolcape)
+game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(4, "Wink")
+game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(5, "Glee")
+game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(0, "Messy")
+game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(10, "MangaHero")
+   elseif chosenavatar == "Empyrean Knight" then -- Empyrean Knight
+local empyreanskin = Color3.fromRGB(0,0,0)
+local empyreanarmor = Color3.fromRGB(184,155,37)
+local empyreancape = Color3.fromRGB(187,0,0)
+
+
+if equiparmor:FindFirstChild("Knight") then
+armor:FireServer(1,equiparmor:FindFirstChild("Knight"),true)
+end
+wait(0.75)
+if equiphelmet:FindFirstChild("Elite Helmet") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Elite Helmet"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Thief King Cloak") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Thief King Cloak"),true)
+end
+if equipaccessory:FindFirstChild("Kai Wraps") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
+end
+hair:FireServer(3, empyreanskin)
+dye:FireServer(1, empyreanarmor)
+dye:FireServer(2, empyreancape)
+dye:FireServer(3, empyreanarmor)
+game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(0, "Bald")
+game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(10, "Bald")
    end
 end)
 Editz:NewLabel("Mutli Tool")
