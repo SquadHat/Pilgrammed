@@ -1579,6 +1579,67 @@ local args = {
 
 game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
 end)
+Editz:NewKeybind("Buster Sword", "", Enum.KeyCode.KeypadSix, function()
+local args = {
+    [1] = {
+        [1] = {
+            [1] = "Patchwork",
+            [2] = "Wonderful"
+        },
+        [2] = {
+            [1] = "Sandpod Crown",
+            [2] = "Angry"
+        },
+        [3] = {
+            [1] = {
+                [1] = "Unharmed Energy",
+                [2] = "Jagged"
+            },
+            [2] = {
+                [1] = "Sandpod Antenna",
+                [2] = "Jagged"
+            },
+            [3] = {
+                [1] = "Combo Glove",
+                [2] = "Jagged"
+            },
+            [4] = {
+                [1] = "Mysterious Charm",
+                [2] = "Jagged"
+            },
+            [5] = {
+                [1] = "Diamond Ring",
+                [2] = "Jagged"
+            }
+        },
+        [4] = {
+            [1] = {
+                [1] = "Rude",
+                [2] = 0
+            },
+            [2] = {
+                [1] = "Delicate",
+                [2] = 1
+            },
+            [3] = {
+                [1] = "Bloodthirst",
+                [2] = 0
+            },
+            [4] = {
+                [1] = "Rampage",
+                [2] = 0
+            },
+            [5] = {
+                [1] = "Juggernaut",
+                [2] = 1
+            }
+        },
+        [5] = "Buster Sword"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
+end)
 Editz:NewKeybind("Tank Build", "", Enum.KeyCode.KeypadZero, function()
 local args = {
     [1] = {
@@ -1635,66 +1696,6 @@ local args = {
             }
         },
         [5] = "Tank Build"
-    }
-}
-
-game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
-Editz:NewKeybind("", "", Enum.KeyCode.KeypadSix, function()
-local args = {
-    [1] = {
-        [1] = {
-            [1] = "Patchwork",
-            [2] = "Wonderful"
-        },
-        [2] = {
-            [1] = "Sandpod Crown",
-            [2] = "Angry"
-        },
-        [3] = {
-            [1] = {
-                [1] = "Unharmed Energy",
-                [2] = "Jagged"
-            },
-            [2] = {
-                [1] = "Sandpod Antenna",
-                [2] = "Jagged"
-            },
-            [3] = {
-                [1] = "Combo Glove",
-                [2] = "Jagged"
-            },
-            [4] = {
-                [1] = "Mysterious Charm",
-                [2] = "Jagged"
-            },
-            [5] = {
-                [1] = "Diamond Ring",
-                [2] = "Jagged"
-            }
-        },
-        [4] = {
-            [1] = {
-                [1] = "Rude",
-                [2] = 0
-            },
-            [2] = {
-                [1] = "Delicate",
-                [2] = 1
-            },
-            [3] = {
-                [1] = "Bloodthirst",
-                [2] = 0
-            },
-            [4] = {
-                [1] = "Rampage",
-                [2] = 0
-            },
-            [5] = {
-                [1] = "Juggernaut",
-                [2] = 1
-            }
-        },
-        [5] = "Buster Sword"
     }
 }
 
