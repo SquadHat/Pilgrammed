@@ -1,110 +1,204 @@
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Buster Sword
     if child.Name == "Buster Sword" then
         child:SetAttribute("Type", "Buster")
     end
 end
--- Buster Sword
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Champion's Gladius
     if child.Name == "Champion's Gladius" then
 		child:SetAttribute("Type", "Champion")
     end
 end
--- Champion's Gladius
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Normal Claw
     if child.Name == "Normal Claw" then
 		child:SetAttribute("Type", "Normal")
     end
 end
--- Normal Claw
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Tanto
     if child.Name == "Tanto" then
 		child:SetAttribute("Type", "Tanto")
     end
 end
--- Tanto
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Nagakiba
     if child.Name == "Nagakiba" then
 		child:SetAttribute("Type", "Nagakiba")
     end
 end
--- Nagakiba
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Empyrean Maul
     if child.Name == "Empyrean Maul" then
 		child:SetAttribute("Type", "Empyrean")
     end
 end
--- Empyrean Maul
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Megaton Hammer
     if child.Name == "Megaton Maul" then
 		child:SetAttribute("Type", "Megaton Hammer")
     end
 end
--- Megaton Hammer
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Crude Club
     if child.Name == "Crude Club" then
 		child:SetAttribute("Type", "Crude Club")
     end
 end
--- Crude Club
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Snowshatter
     if child.Name == "Snowshatter" then
 	child:SetAttribute("Type", "Snowshatter")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Maimed Cudgel
+    if child.Name == "Maimed Cudgel" then
+	child:SetAttribute("Type", "Cudgel")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Executioner Greatsword
+    if child.Name == "Executioner's Greatsword" then
+	child:SetAttribute("Type", "Executioner")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Iron Greatsword
+    if child.Name == "Iron Greatsword" then
+	child:SetAttribute("Type", "Iron Greatsword")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Wooden Dagger
+    if child.Name == "Wooden Dagger" then
+	child:SetAttribute("Type", "Wood Dagger")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Bronze Sword
+    if child.Name == "Bronze Sword" then
+	child:SetAttribute("Type", "Bronze Sword")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Anchor
+    if child.Name == "Anchor" then
+	child:SetAttribute("Type", "Anchor")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Halberd
+    if child.Name == "Halberd" then
+	child:SetAttribute("Type", "Halberd")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Trident
+    if child.Name == "Trident" then
+	child:SetAttribute("Type", "Trident")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Prism lance
+    if child.Name == "Prism lance" then
+	child:SetAttribute("Type", "Prism lance")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Feral Scimitar
+    if child.Name == "Feral Scimitar" then
+	child:SetAttribute("Type", "Feral")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Shotel
+    if child.Name == "Shotel" then
+	child:SetAttribute("Type", "Shotel")
     end
 end
 --[[ Character ]]--
 game.Players.LocalPlayer.CharacterAdded:Connect(function()
 wait(2)
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Buster Sword
     if child.Name == "Buster Sword" then
         child:SetAttribute("Type", "Buster")
     end
 end
--- Buster Sword
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Champion's Gladius
     if child.Name == "Champion's Gladius" then
 		child:SetAttribute("Type", "Champion")
     end
 end
--- Champion's Gladius
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Normal Claw
     if child.Name == "Normal Claw" then
 		child:SetAttribute("Type", "Normal")
     end
 end
--- Normal Claw
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Tanto
     if child.Name == "Tanto" then
 		child:SetAttribute("Type", "Tanto")
     end
 end
--- Tanto
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Nagakiba
     if child.Name == "Nagakiba" then
 		child:SetAttribute("Type", "Nagakiba")
     end
 end
--- Nagakiba
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Empyrean Maul
     if child.Name == "Empyrean Maul" then
 		child:SetAttribute("Type", "Empyrean")
     end
 end
--- Empyrean Maul
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Megaton Hammer
     if child.Name == "Megaton Maul" then
 		child:SetAttribute("Type", "Megaton Hammer")
     end
 end
--- Megaton Hammer
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Crude Club
     if child.Name == "Crude Club" then
 		child:SetAttribute("Type", "Crude Club")
     end
 end
--- Crude Club
-for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Snowshatter
     if child.Name == "Snowshatter" then
-		child:SetAttribute("Type", "Snowshatter")
+	child:SetAttribute("Type", "Snowshatter")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Maimed Cudgel
+    if child.Name == "Maimed Cudgel" then
+	child:SetAttribute("Type", "Cudgel")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Executioner Greatsword
+    if child.Name == "Executioner's Greatsword" then
+	child:SetAttribute("Type", "Executioner")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Iron Greatsword
+    if child.Name == "Iron Greatsword" then
+	child:SetAttribute("Type", "Iron Greatsword")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Wooden Dagger
+    if child.Name == "Wooden Dagger" then
+	child:SetAttribute("Type", "Wood Dagger")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Bronze Sword
+    if child.Name == "Bronze Sword" then
+	child:SetAttribute("Type", "Bronze Sword")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Anchor
+    if child.Name == "Anchor" then
+	child:SetAttribute("Type", "Anchor")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Halberd
+    if child.Name == "Halberd" then
+	child:SetAttribute("Type", "Halberd")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Trident
+    if child.Name == "Trident" then
+	child:SetAttribute("Type", "Trident")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Prism lance
+    if child.Name == "Prism lance" then
+	child:SetAttribute("Type", "Prism lance")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Feral Scimitar
+    if child.Name == "Feral Scimitar" then
+	child:SetAttribute("Type", "Feral")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Shotel
+    if child.Name == "Shotel" then
+	child:SetAttribute("Type", "Shotel")
     end
 end
 end)
