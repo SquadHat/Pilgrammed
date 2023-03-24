@@ -704,7 +704,7 @@ local equiparmor = game:GetService("Players").LocalPlayer.Armors
 local equiphelmet = game:GetService("Players").LocalPlayer.Helmets
 local equipaccessory = game:GetService("Players").LocalPlayer.Accessories
 
-Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black","Pink","White","Yellow","Knight","Astolfo","Empyrean Knight","Gojo","Hunter"}, function(chosenavatar)
+Editz:NewDropdown("Choose Avatar", "", {"Demon","Ice","Black","Pink","White","Yellow","Knight","Astolfo","Empyrean Knight","Gojo","Hunter","Shock Marauder","Highland Warden"}, function(chosenavatar)
  if chosenavatar == "Demon" then -- Imp
 game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(10, "Ponytail")
 game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(0, "MangaHero")
@@ -719,6 +719,8 @@ wait(0.75)
 if equipaccessory:FindFirstChild("Thief King Cloak") then
 armor:FireServer(3,equipaccessory:FindFirstChild("Thief King Cloak"),true)
 end
+hair:FireServer(4, "Wink")
+hair:FireServer(5, "Fearless")
 dye:FireServer(2, accessoryred)
 dye:FireServer(3, accessoryred)
 hair:FireServer(3, skinred)
@@ -744,6 +746,8 @@ end
 if equipaccessory:FindFirstChild("Kai Wraps") then
 armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
 end
+hair:FireServer(4, "Wink")
+hair:FireServer(5, "Fearless")
 dye:FireServer(2, cyan)
 dye:FireServer(3, cyan)
 hair:FireServer(3, blueskin)
@@ -776,6 +780,8 @@ wait(0.75)
 if equipaccessory:FindFirstChild("Kai Wraps") then
 armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
 end
+hair:FireServer(4, "Wink")
+hair:FireServer(5, "Fearless")
 dye:FireServer(3, wraps)
 dye:FireServer(0, wraps)
 dye:FireServer(2, black)
@@ -801,6 +807,8 @@ wait(0.85)
 if equipaccessory:FindFirstChild("Kai Wraps") then
 armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
 end
+hair:FireServer(4, "Wink")
+hair:FireServer(5, "Fearless")
 dye:FireServer(0, pink)
 dye:FireServer(3, pink)
 dye:FireServer(1, pink)
@@ -833,6 +841,8 @@ wait(0.75)
 if equipaccessory:FindFirstChild("Kai Wraps") then
 armor:FireServer(0,equipaccessory:FindFirstChild("Kai Wraps"),true)
 end
+hair:FireServer(4, "Wink")
+hair:FireServer(5, "Fearless")
 hair:FireServer(3, white)
 hair:FireServer(1, white)
 hair:FireServer(11, white)
@@ -862,6 +872,8 @@ wait(0.75)
 if equipaccessory:FindFirstChild("Kai Wraps") then
 armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
 end
+hair:FireServer(4, "Wink")
+hair:FireServer(5, "Fearless")
 hair:FireServer(3, whiteskin)
 hair:FireServer(1, yellowhair)
 hair:FireServer(11, yellowhair)
@@ -1036,10 +1048,10 @@ armor:FireServer(3,equipaccessory:FindFirstChild("Outlaw Glasses"),true)
 end
 game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Reaper")
 game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Vampire")
-game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(0, "Headband")
-game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(10, "NerdHair")
-game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(4, "Sure")
-game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(5, "Sure")
+hair:FireServer(0, "Headband")
+hair:FireServer(10, "NerdHair")
+hair:FireServer(4, "Sure")
+hair:FireServer(5, "Sure")
 hair:FireServer(3, shockskin)
 hair:FireServer(0, "Bald")
 hair:FireServer(10, "Bald")
@@ -1047,6 +1059,34 @@ dye:FireServer(2, shockcape)
 dye:FireServer(0, shockhat)
 dye:FireServer(1, shockskin)
 dye:FireServer(3, shockwraps)
+   elseif chosenavatar == "Highland Warden" then -- Warden
+local wardenskin = Color3.fromRGB(0,15,255)
+local vikinghelm = Color3.fromRGB(17,17,17)
+local wardencape = Color3.fromRGB(17,17,17)
+local wardenarmor = Color3.fromRGB(170,170,170)
+
+if equiparmor:FindFirstChild("Kiramisu Robes") then
+armor:FireServer(1,equiparmor:FindFirstChild("Kiramisu Robes"),true)
+end
+wait(0.75)
+if equiphelmet:FindFirstChild("Viking Helmet") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Viking Helmet"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Thief King Cloak") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Thief King Cloak"),true)
+end
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Reaper")
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Vampire")
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Ice")
+hair:FireServer(3, wardenskin)
+dye:FireServer(0, vikinghelm)
+dye:FireServer(1, wardenarmor)
+dye:FireServer(2, wardencape)
+hair:FireServer(0, "Bald")
+hair:FireServer(10, "Bald")
+hair:FireServer(4, "Dots")
+hair:FireServer(5, "Poor")
    end
 end)
 Editz:NewLabel("Mutli Tool")
