@@ -899,12 +899,12 @@ dye:FireServer(2, capecolor)
 dye:FireServer(3, capecolor)
    elseif chosenavatar == "Astolfo" then -- Astolfo
 local astolhair = Color3.fromRGB(255, 175, 190)
-local astolarmor = Color3.fromRGB(0,0,0)
+local astolarmor = Color3.fromRGB(255,215,255)
 local astolcape = Color3.fromRGB(255,255,255)
 
 
-if equiparmor:FindFirstChild("Mercenary") then
-armor:FireServer(1,equiparmor:FindFirstChild("Mercenary"),true)
+if equiparmor:FindFirstChild("Kiramisu Robes") then
+armor:FireServer(1,equiparmor:FindFirstChild("Kiramisu Robes"),true)
 end
 wait(0.75)
 if equiphelmet:FindFirstChild("Familiar Hair") then
