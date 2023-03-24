@@ -704,7 +704,7 @@ local equiparmor = game:GetService("Players").LocalPlayer.Armors
 local equiphelmet = game:GetService("Players").LocalPlayer.Helmets
 local equipaccessory = game:GetService("Players").LocalPlayer.Accessories
 
-Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black","Pink","White","Yellow","Knight","Astolfo","Empyrean Knight","Gojo"}, function(chosenavatar)
+Editz:NewDropdown("Choose Avatar", "", {"Demon", "Ice", "Black","Pink","White","Yellow","Knight","Astolfo","Empyrean Knight","Gojo","Hunter"}, function(chosenavatar)
  if chosenavatar == "Demon" then -- Imp
 game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(10, "Ponytail")
 game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(0, "MangaHero")
@@ -957,6 +957,7 @@ game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(10, "Bald")
 local gojohair = Color3.fromRGB(255,242,255)
 local gojoarmor = Color3.fromRGB(150,0,215)
 local gojowraps = Color3.fromRGB(45,0,55)
+local gojoskin = Color3.fromHex("#FF9C34")
 
 if equiparmor:FindFirstChild("Kiramisu Robes") then
 armor:FireServer(1,equiparmor:FindFirstChild("Kiramisu Robes"),true)
@@ -973,6 +974,7 @@ wait(0.75)
 if equipaccessory:FindFirstChild("Outlaw Glasses") then
 armor:FireServer(3,equipaccessory:FindFirstChild("Outlaw Glasses"),true)
 end
+hair:FireServer(3, gojoskin)
 hair:FireServer(4, "Fearless")
 hair:FireServer(5, "Tale")
 game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Reaper")
@@ -983,6 +985,68 @@ hair:FireServer(1, gojohair)
 hair:FireServer(11, gojohair)
 dye:FireServer(1, gojoarmor)
 dye:FireServer(3, gojowraps)
+   elseif chosenavatar == "Hunter" then -- Hunter
+local hunterskin = Color3.fromRGB(0,0,0)
+local hunterhood = Color3.fromRGB(0,0,0)
+local hunterwraps = Color3.fromHex("#203748")
+
+if equiparmor:FindFirstChild("Frost Coat") then
+armor:FireServer(1,equiparmor:FindFirstChild("Frost Coat"),true)
+end
+wait(0.75)
+if equiphelmet:FindFirstChild("Snow Wanderer Hood") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Snow Wanderer Hood"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Brilliant Cape") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Kai Wraps") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
+end
+hair:FireServer(3, hunterskin)
+dye:FireServer(0, hunterhood)
+dye:FireServer(2, hunterhood)
+dye:FireServer(3, hunterwraps)
+   elseif chosenavatar == "Shock Marauder" then -- Shock Marauder
+local shockskin = Color3.fromHex("#E4DC00")
+local shockhat = Color3.fromRGB(17,17,17)
+local shockcape = Color3.fromRGB(17,17,17)
+local steampunk = Color3.fromRGB(17,17,17)
+local shockwraps = Color3.fromHex("#000000")
+if equiparmor:FindFirstChild("Liar") then
+armor:FireServer(1,equiparmor:FindFirstChild("Liar"),true)
+end
+wait(0.75)
+if equiphelmet:FindFirstChild("Cowboy Hat") then
+armor:FireServer(0,equiphelmet:FindFirstChild("Cowboy Hat"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Brilliant Cape") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Brilliant Cape"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Kai Wraps") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Kai Wraps"),true)
+end
+wait(0.75)
+if equipaccessory:FindFirstChild("Outlaw Glasses") then
+armor:FireServer(3,equipaccessory:FindFirstChild("Outlaw Glasses"),true)
+end
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Reaper")
+game:GetService("ReplicatedStorage").Remotes.Skill:FireServer("Vampire")
+game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(0, "Headband")
+game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(10, "NerdHair")
+game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(4, "Sure")
+game:GetService("ReplicatedStorage").Remotes.Hair:FireServer(5, "Sure")
+hair:FireServer(3, shockskin)
+hair:FireServer(0, "Bald")
+hair:FireServer(10, "Bald")
+dye:FireServer(2, shockcape)
+dye:FireServer(0, shockhat)
+dye:FireServer(1, shockskin)
+dye:FireServer(3, shockwraps)
    end
 end)
 Editz:NewLabel("Mutli Tool")
