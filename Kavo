@@ -899,7 +899,7 @@ dye:FireServer(2, capecolor)
 dye:FireServer(3, capecolor)
    elseif chosenavatar == "Astolfo" then -- Astolfo
 local astolhair = Color3.fromRGB(255, 175, 190)
-local astolarmor = Color3.fromRGB(255,215,255)
+local astolarmor = Color3.fromRGB(255,255,255)
 local astolcape = Color3.fromRGB(255,255,255)
 
 
