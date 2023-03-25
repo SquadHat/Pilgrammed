@@ -719,6 +719,7 @@ wait(0.75)
 if equipaccessory:FindFirstChild("Thief King Cloak") then
 armor:FireServer(3,equipaccessory:FindFirstChild("Thief King Cloak"),true)
 end
+game:GetService("ReplicatedStorage").Remotes.Armor:FireServer(4, true)
 hair:FireServer(4, "Wink")
 hair:FireServer(5, "Fearless")
 dye:FireServer(2, accessoryred)
