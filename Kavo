@@ -1928,16 +1928,19 @@ end)
 Editz:NewKeybind("Dodge", "", Enum.KeyCode.G, function()
 for _,v in pairs(game:GetService("Players").LocalPlayer.EquippedAccessories:GetChildren()) do
     if v:IsA"StringValue" and v.Value == "Power Locket" then
+wait(0.1)
 armor:FireServer(3,equipaccessory:FindFirstChild("Ivory Anklet"),false)
 skillkey:FireServer(SkillX, 1)
-wait(0.5)
+wait(0.75)
 armor:FireServer(3,equipaccessory:FindFirstChild("Power Locket"),false)
     else if v.Value == "Combo Glove" then
+wait(0.1)
 armor:FireServer(3,equipaccessory:FindFirstChild("Ivory Anklet"),false)
 skillkey:FireServer(SkillX, 1)
 wait(0.5)
 armor:FireServer(3,equipaccessory:FindFirstChild("Combo Glove"),false)
     else if v.Value == "Outlaw Glasses" then
+wait(0.1)
 armor:FireServer(3,equipaccessory:FindFirstChild("Pirate Bracelet"),false)
 skillkey:FireServer(SkillX, 1)
 wait(0.5)
@@ -1948,16 +1951,19 @@ end)
 Editz:NewKeybind("Heal", "", Enum.KeyCode.Z, function()
 for _,v in pairs(game:GetService("Players").LocalPlayer.EquippedAccessories:GetChildren()) do
     if v:IsA"StringValue" and v.Value == "Power Locket" then
+wait(0.1)
 armor:FireServer(3,equipaccessory:FindFirstChild("Blood Chalice"),false)
 skillkey:FireServer(SkillX, 1)
 wait(0.5)
 armor:FireServer(3,equipaccessory:FindFirstChild("Power Locket"),false)
     else if v.Value == "Combo Glove" then
+wait(0.1)
 armor:FireServer(3,equipaccessory:FindFirstChild("Blood Chalice"),false)
 skillkey:FireServer(SkillX, 1)
 wait(0.5)
 armor:FireServer(3,equipaccessory:FindFirstChild("Combo Glove"),false)
     else if v.Value == "Outlaw Glasses" then
+wait(0.1)
 armor:FireServer(3,equipaccessory:FindFirstChild("Blood Chalice"),false)
 skillkey:FireServer(SkillX, 1)
 wait(0.5)
