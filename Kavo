@@ -1120,7 +1120,7 @@ local args = {
         },
         [3] = {
             [1] = {
-                [1] = "Diamond Ring",
+                [1] = "Combo Glove",
                 [2] = "Jagged"
             },
             [2] = {
@@ -1136,7 +1136,7 @@ local args = {
                 [2] = "Jagged"
             },
             [5] = {
-                [1] = "Combo Glove",
+                [1] = "Diamond Ring",
                 [2] = "Jagged"
             }
         },
@@ -1181,7 +1181,7 @@ local args = {
         },
         [3] = {
             [1] = {
-                [1] = "Shiver Stone",
+                [1] = "Combo Glove",
                 [2] = "Jagged"
             },
             [2] = {
@@ -1197,7 +1197,7 @@ local args = {
                 [2] = "Jagged"
             },
             [5] = {
-                [1] = "Combo Glove",
+                [1] = "Shiver Stone",
                 [2] = "Jagged"
             }
         },
@@ -1299,16 +1299,16 @@ local args = {
         },
         [3] = {
             [1] = {
-                [1] = "Unharmed Energy",
-                [2] = "Jagged"
+                [1] = "Outlaw Glasses",
+                [2] = "Deft"
             },
             [2] = {
                 [1] = "Pistol Pop Pellets",
                 [2] = "Deft"
             },
             [3] = {
-                [1] = "Outlaw Glasses",
-                [2] = "Deft"
+                [1] = "Unharmed Energy",
+                [2] = "Jagged"
             },
             [4] = {
                 [1] = "Ranger Emblem",
@@ -1532,11 +1532,11 @@ local args = {
         },
         [3] = {
             [1] = {
-                [1] = "Mysterious Charm",
+                [1] = "Combo Glove",
                 [2] = "Jagged"
             },
             [2] = {
-                [1] = "Combo Glove",
+                [1] = "Mysterious Charm",
                 [2] = "Jagged"
             },
             [3] = {
@@ -1592,16 +1592,16 @@ local args = {
         },
         [3] = {
             [1] = {
-                [1] = "Bloody Tear",
-                [2] = "Bright"
+                [1] = "Combo Glove",
+                [2] = "Jagged"
             },
             [2] = {
                 [1] = "Blood Chalice",
                 [2] = "Bright"
             },
             [3] = {
-                [1] = "Combo Glove",
-                [2] = "Jagged"
+                [1] = "Bloody Tear",
+                [2] = "Bright"
             },
             [4] = {
                 [1] = "Diamond Ring",
@@ -1661,7 +1661,7 @@ local args = {
         },
         [3] = {
             [1] = {
-                [1] = "Martial Kata",
+                [1] = "Combo Glove",
                 [2] = "Jagged"
             },
             [2] = {
@@ -1669,7 +1669,7 @@ local args = {
                 [2] = "Jagged"
             },
             [3] = {
-                [1] = "Combo Glove",
+                [1] = "Martial Kata",
                 [2] = "Jagged"
             },
             [4] = {
@@ -1722,7 +1722,7 @@ local args = {
         },
         [3] = {
             [1] = {
-                [1] = "Sandpod Antenna",
+                [1] = "Combo Glove",
                 [2] = "Jagged"
             },
             [2] = {
@@ -1730,7 +1730,7 @@ local args = {
                 [2] = "Tough"
             },
             [3] = {
-                [1] = "Combo Glove",
+                [1] = "Sandpod Antenna",
                 [2] = "Jagged"
             },
             [4] = {
@@ -1783,7 +1783,7 @@ local args = {
         },
         [3] = {
             [1] = {
-                [1] = "Unharmed Energy",
+                [1] = "Combo Glove",
                 [2] = "Jagged"
             },
             [2] = {
@@ -1791,7 +1791,7 @@ local args = {
                 [2] = "Jagged"
             },
             [3] = {
-                [1] = "Combo Glove",
+                [1] = "Unharmed Energy",
                 [2] = "Jagged"
             },
             [4] = {
@@ -1844,8 +1844,8 @@ local args = {
         },
         [3] = {
             [1] = {
-                [1] = "Elite Shield",
-                [2] = "Tough"
+                [1] = "Combo Glove",
+                [2] = "Jagged"
             },
             [2] = {
                 [1] = "Illustrious Charm",
@@ -1860,8 +1860,8 @@ local args = {
                 [2] = "Jagged"
             },
             [5] = {
-                [1] = "Combo Glove",
-                [2] = "Jagged"
+                [1] = "Elite Shield",
+                [2] = "Tough"
             }
         },
         [4] = {
@@ -1892,18 +1892,77 @@ local args = {
 
 game:GetService("ReplicatedStorage").Remotes.Loadout:FireServer(unpack(args))
 end)
+
+local skillkey = game:GetService("ReplicatedStorage").Remotes.SkillKey
+
 Editz:NewLabel("Skill Key")
-Editz:NewKeybind("Kolis Charm", "", Enum.KeyCode.KeypadPlus, function()
+Editz:NewKeybind("Effect", "", Enum.KeyCode.KeypadPlus, function()
 for _,v in pairs(game:GetService("Players").LocalPlayer.EquippedAccessories:GetChildren()) do
-    if v:IsA"StringValue" and v.Value == "Power Locket" or v.Value == "Kolis Charm" or v.Value == "Kai Blessing" then
-game:GetService("ReplicatedStorage").Remotes.Armor:FireServer(3,equipaccessory:FindFirstChild("Kai Blessing"),false)
-game:GetService("ReplicatedStorage").Remotes.SkillKey:FireServer(SkillX, 1)
+    if v:IsA"StringValue" and v.Value == "Power Locket" then
+armor:FireServer(3,equipaccessory:FindFirstChild("Kolis Charm"),false)
+skillkey:FireServer(SkillX, 1)
+wait(10.5)
+armor:FireServer(3,equipaccessory:FindFirstChild("Kai Blessing"),false)
+skillkey:FireServer(SkillX, 1)
 wait(0.5)
-game:GetService("ReplicatedStorage").Remotes.Armor:FireServer(3,equipaccessory:FindFirstChild("Kolis Charm"),false)
-game:GetService("ReplicatedStorage").Remotes.SkillKey:FireServer(SkillX, 1)
+armor:FireServer(3,equipaccessory:FindFirstChild("Power Locket"),false)
+    else if v.Value == "Combo Glove" then
+armor:FireServer(3,equipaccessory:FindFirstChild("Kai Blessing"),false)
+skillkey:FireServer(SkillX, 1)
 wait(0.5)
-game:GetService("ReplicatedStorage").Remotes.Armor:FireServer(3,equipaccessory:FindFirstChild("Power Locket"),false)
-end end
+armor:FireServer(3,equipaccessory:FindFirstChild("Knight Talisman"),false)
+skillkey:FireServer(SkillX, 1)
+wait(0.5)
+armor:FireServer(3,equipaccessory:FindFirstChild("Combo Glove"),false)
+    else if v.Value == "Outlaw Glasses" then
+armor:FireServer(3,equipaccessory:FindFirstChild("Kai Blessing"),false)
+skillkey:FireServer(SkillX, 1)
+wait(0.5)
+armor:FireServer(3,equipaccessory:FindFirstChild("Knight Talisman"),false)
+skillkey:FireServer(SkillX, 1)
+wait(0.5)
+armor:FireServer(3,equipaccessory:FindFirstChild("Outlaw Glasses"),false)
+end end end end
+end)
+
+Editz:NewKeybind("Dodge", "", Enum.KeyCode.G, function()
+for _,v in pairs(game:GetService("Players").LocalPlayer.EquippedAccessories:GetChildren()) do
+    if v:IsA"StringValue" and v.Value == "Power Locket" then
+armor:FireServer(3,equipaccessory:FindFirstChild("Ivory Anklet"),false)
+skillkey:FireServer(SkillX, 1)
+wait(0.5)
+armor:FireServer(3,equipaccessory:FindFirstChild("Power Locket"),false)
+    else if v.Value == "Combo Glove" then
+armor:FireServer(3,equipaccessory:FindFirstChild("Ivory Anklet"),false)
+skillkey:FireServer(SkillX, 1)
+wait(0.5)
+armor:FireServer(3,equipaccessory:FindFirstChild("Combo Glove"),false)
+    else if v.Value == "Outlaw Glasses" then
+armor:FireServer(3,equipaccessory:FindFirstChild("Pirate Bracelet"),false)
+skillkey:FireServer(SkillX, 1)
+wait(0.5)
+armor:FireServer(3,equipaccessory:FindFirstChild("Outlaw Glasses"),false)
+end end end end
+end)
+
+Editz:NewKeybind("Heal", "", Enum.KeyCode.Z, function()
+for _,v in pairs(game:GetService("Players").LocalPlayer.EquippedAccessories:GetChildren()) do
+    if v:IsA"StringValue" and v.Value == "Power Locket" then
+armor:FireServer(3,equipaccessory:FindFirstChild("Blood Chalice"),false)
+skillkey:FireServer(SkillX, 1)
+wait(0.5)
+armor:FireServer(3,equipaccessory:FindFirstChild("Power Locket"),false)
+    else if v.Value == "Combo Glove" then
+armor:FireServer(3,equipaccessory:FindFirstChild("Blood Chalice"),false)
+skillkey:FireServer(SkillX, 1)
+wait(0.5)
+armor:FireServer(3,equipaccessory:FindFirstChild("Combo Glove"),false)
+    else if v.Value == "Outlaw Glasses" then
+armor:FireServer(3,equipaccessory:FindFirstChild("Blood Chalice"),false)
+skillkey:FireServer(SkillX, 1)
+wait(0.5)
+armor:FireServer(3,equipaccessory:FindFirstChild("Outlaw Glasses"),false)
+end end end end
 end)
 --[[ Settings ]]--
 
