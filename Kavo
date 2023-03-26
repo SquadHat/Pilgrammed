@@ -1895,7 +1895,10 @@ end)
 Editz:NewLabel("Skill Key")
 Editz:NewKeybind("Kolis Charm", "", Enum.KeyCode.KeypadPlus, function()
 for _,v in pairs(game:GetService("Players").LocalPlayer.EquippedAccessories:GetChildren()) do
-    if v:IsA"StringValue" and v.Value == "Power Locket" or v.Value == "Kolis Charm" then
+    if v:IsA"StringValue" and v.Value == "Power Locket" or v.Value == "Kolis Charm" or v.Value == "Kai Blessing" then
+game:GetService("ReplicatedStorage").Remotes.Armor:FireServer(3,equipaccessory:FindFirstChild("Kai Blessing"),false)
+game:GetService("ReplicatedStorage").Remotes.SkillKey:FireServer(SkillX, 1)
+wait(0.5)
 game:GetService("ReplicatedStorage").Remotes.Armor:FireServer(3,equipaccessory:FindFirstChild("Kolis Charm"),false)
 game:GetService("ReplicatedStorage").Remotes.SkillKey:FireServer(SkillX, 1)
 wait(0.5)
