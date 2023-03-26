@@ -1928,7 +1928,6 @@ end)
 Editz:NewKeybind("Dodge", "", Enum.KeyCode.G, function()
 for _,v in pairs(game:GetService("Players").LocalPlayer.EquippedAccessories:GetChildren()) do
     if v:IsA"StringValue" and v.Value == "Power Locket" then
-wait(0.1)
 armor:FireServer(3,equipaccessory:FindFirstChild("Ivory Anklet"),false)
 skillkey:FireServer(SkillX, 1)
 wait(0.55)
@@ -1951,7 +1950,6 @@ end)
 Editz:NewKeybind("Heal", "", Enum.KeyCode.Z, function()
 for _,v in pairs(game:GetService("Players").LocalPlayer.EquippedAccessories:GetChildren()) do
     if v:IsA"StringValue" and v.Value == "Power Locket" then
-wait(0.1)
 armor:FireServer(3,equipaccessory:FindFirstChild("Blood Chalice"),false)
 skillkey:FireServer(SkillX, 1)
 wait(0.55)
