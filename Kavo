@@ -1596,11 +1596,11 @@ local args = {
                 [2] = "Jagged"
             },
             [2] = {
-                [1] = "Blood Chalice",
+                [1] = "Bloody Tear",
                 [2] = "Bright"
             },
             [3] = {
-                [1] = "Bloody Tear",
+                [1] = "Blood Chalice",
                 [2] = "Bright"
             },
             [4] = {
