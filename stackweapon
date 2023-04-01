@@ -98,6 +98,11 @@ for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren
 	child:SetAttribute("Type", "Shotel")
     end
 end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Creepy Claw
+    if child.Name == "Creepy Claw" then
+	child:SetAttribute("Type", "Creepy Claw")
+    end
+end
 --[[ Character ]]--
 game.Players.LocalPlayer.CharacterAdded:Connect(function()
 wait(2)
@@ -199,6 +204,11 @@ end
 for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Shotel
     if child.Name == "Shotel" then
 	child:SetAttribute("Type", "Shotel")
+    end
+end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Creepy Claw
+    if child.Name == "Creepy Claw" then
+	child:SetAttribute("Type", "Creepy Claw")
     end
 end
 end)
