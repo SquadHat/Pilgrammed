@@ -1055,7 +1055,6 @@ Editz:NewButton("Mutli Tool (Edited)", "This version is edited the original one 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SquadHat/Pilgrammed/main/Multi"))()
 end)
 Editz:NewLabel("Press Once")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/SquadHat/Pilgrammed/main/stackweapon"))()
 Editz:NewButton("Attribute", "", function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SquadHat/Pilgrammed/main/stackweapon"))()
 end)
