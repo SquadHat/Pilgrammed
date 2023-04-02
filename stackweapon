@@ -103,6 +103,11 @@ for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren
 	child:SetAttribute("Type", "Creepy Claw")
     end
 end
+for _,child in pairs(game:GetService("Players").LocalPlayer.Backpack:GetChildren()) do -- Prime Brand
+    if child.Name == "Prime Brand" then
+	child:SetAttribute("Type", "Prime Brand")
+    end
+end
 --[[ Character ]]--
 game.Players.LocalPlayer.CharacterAdded:Connect(function()
 wait(2)
